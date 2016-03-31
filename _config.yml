@@ -1,0 +1,45 @@
+# Title, decription, tagline and URL for your site
+# Can be used in your theme by calling 'site.title' and so on
+title: julien-brionne.fr
+description: Julien Brionnes's personal website
+tagline: Product Thinker
+url: localhost:4000
+
+# Used so Jekyll outputs the site correctly so Gulp can do what it wants
+source: src
+destination: serve
+
+# Same as the title etc for your site but can instead be
+# called by using 'site.author.name' and so on
+author:
+  name: Julien Brionne
+  email: julien.brionne@gmail.com
+  bio: My name's Julien Brionne, i'm living in Paris as a Product Manager for the E-Commerce industry. 
+  twitter: http://twitter.com/akashrine
+
+# general setting for Jekyll
+googleAnalytics: UA-3248722-6
+disqus: akashrine
+
+# _config.build.yml overwrites these options when you run `gulp build`
+# Enables future posts (posts with dates in the future) and drafts
+future: true
+show_drafts: true
+# Disables the more accurate related posts for faster generating of the site
+lsi: false
+# Only make the last 10 posts so generating isn't slow
+limit_posts: 10
+
+# Permalink structure and pagination options
+permalink: /:title.html
+paginate: 10
+paginate_path: '/blog/page:num/'
+excerpt_separator: '<!--more-->'
+
+#social stuff
+social:
+    twitter: http://twitter.com/akashrine/
+    lastfm: http://lastfm.fr/user/akashrine
+    github: http://github.com/akashrine
+
+gems: [jekyll-paginate, jekyll-gist]
