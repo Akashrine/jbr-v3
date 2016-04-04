@@ -3,6 +3,7 @@ layout: post
 date: 2014-03-02
 title: Introducing Poole
 categories: jekyll poole
+allowComments: true
 ---
 
 *The Strange Case of Dr. Jeykll and Mr. Hyde* tells the story of a lawyer
