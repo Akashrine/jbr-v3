@@ -12,8 +12,14 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
-<link rel="next" href="{{ site.baseurl }}page2/" />
 
+<link rel="next" href="{{ site.baseurl }}/blog/page2/" />
+<meta name="keywords" content="Julien Brionne, Product Manager, UI developper, Thinker">
+<meta name="description" content="{{ site.description }}">
+<meta name="subject" content="{{site.name}}">
+<meta name="language" content="fr">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
     <meta property="og:site_name" content="{{ site.name }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ site.name }}" />
@@ -52,5 +58,10 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <!-- Prefetching, preloading, prebrowsing -->
+<link rel="dns-prefetch" href="//julien-brionne.fr/">
+<link rel="preconnect" href="{{site.url}}">
+<link rel="prefetch" href="{{site.url}}">
+<link rel="prerender" href="{{site.url}}">
   {% include ga.html %}
 </head>
