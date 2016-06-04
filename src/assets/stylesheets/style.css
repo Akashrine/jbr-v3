@@ -1,4 +1,412 @@
 /*==============================
 =            Styles            =
 ==============================*/
+/*----------  Base  ----------*/
+/*==============================
+=            Reset             =
+==============================*/
+/**
+ *
+ * Based on normalize and normalize-opentype
+ *
+ */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900,300);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700);
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+body {
+  margin: 0; }
+
+a {
+  background: transparent; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal; }
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline; }
+
+button, input {
+  line-height: normal; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/*! normalize-opentype.css v0.2.4 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
+/**
+ * 1. Inherit style issues with custom selections, per robsterlini.co.uk/journal/opentype-and-selection-dont-mix
+ * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+ *    Turn off all other ligatures, tabular, lining numerals, and alternates
+      Uses same settings for tables
+ */
+::-moz-selection {
+  color: inherit;
+  /* 1. */
+  text-shadow: inherit;
+  /* 2. */
+  background-color: #ACCEF7;
+  /* 3. */ }
+::selection {
+  color: inherit;
+  /* 1. */
+  text-shadow: inherit;
+  /* 2. */
+  background-color: #ACCEF7;
+  /* 3. */ }
+
+html,
+body,
+table {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  /* 2. */ }
+
+/* Headings
+========================================================================== */
+/**
+ * 1. Turn on discretionary ligatures for larger headings
+ */
+h1,
+h2,
+h3 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  /* 1. */ }
+
+/* Text-level semantics
+========================================================================== */
+/**
+ * 1. Change all letters to uppercase
+ * 2. Turn on small caps for upper and lowercase letters
+ */
+abbr {
+  text-transform: uppercase;
+  /* 1 */
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  /* 2 */ }
+
+/*
+ * TODO: Turn on diagonal fractions where appropriate
+ */
+time {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0; }
+
+/*
+ * 1. Turn off kerning and ligatures,
+ *    Turn on lining, tabular numerals, slashed zero
+ */
+pre,
+kbd,
+samp,
+code {
+  -webkit-font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+     -moz-font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+          font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  /* 1. */ }
+
+/**
+ * 1. Turn on proper supercript numerals
+ */
+sup {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+  /* 1. */ }
+
+/**
+ * 1. Turn on proper subscript numerals
+ */
+sub {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+  /* 1. */ }
+
+/* Grouping content
+========================================================================== */
+/**
+ * TODO: Adds proper bullets
+ */
+/*
+ * TODO:
+ * 1. Adds counters for lists
+ * 2. Use proper numerals for lists
+ */
+/**
+ * Adds proper small caps
+ */
+/**
+ * TODO: scmp, sc2c, pnum, case sensitive forms for postal codes
+ */
+/* Forms
+========================================================================== */
+/**
+ * 1. Turns on lining, proportional numerals without clarified zeroes
+ * TODO: Additional input modes https://developer.mozilla.org/en/docs/Web/HTML/Element/Input#attr-inputmode
+ */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="range"],
+input[type="tel"],
+input[type="week"] {
+  -webkit-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+     -moz-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+          font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+  /* 1. */ }
+
+/* Tables
+========================================================================== */
+/**
+ * 1. Turns on tabular, lining numerals and slashed zero
+ */
+tbody,
+caption {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  /* 1. */ }
+
+/*=====  End of Reset   ======*/
+/*==============================
+=            Config            =
+==============================*/
+/*----------  Font Face  ----------*/
+/*----------  Color  ----------*/
+/**
+*
+* Colours | Avoid the use of map-get
+*
+**/
+/*----------  Typo  Vars ----------*/
+/*=====  End of Config  ======*/
+/*============================
+=            Base            =
+============================*/
+html {
+  font: 100%/1.4 "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+@media (min-width: 40rem) {
+  html {
+    font-size: 112%; } }
+
+@media (min-width: 64rem) {
+  html {
+    font-size: 120%; } }
+
+body {
+  color: #666;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #222;
+  letter-spacing: -.025rem;
+  font-family: "Source Serif Pro", serif; }
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem; }
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+h3 {
+  font-size: 1.313rem;
+  margin-bottom: .5rem; }
+
+@media (min-width: 40rem) {
+  h1 {
+    font-size: 3rem; }
+  h2 {
+    font-size: 2.25rem; }
+  h3 {
+    font-size: 1.5rem; } }
+
+/*=====  End of Base  ======*/
+/*----------  Partials  ----------*/
+/*==============================
+=            Header            =
+==============================*/
+/*=====  End of Header  ======*/
+/*==============================
+=            Footer            =
+==============================*/
+/*=====  End of Footer  ======*/
+/*----------  Components  ----------*/
+/*==========================================
+=            Figures & Pictures            =
+==========================================*/
+/*=====  End of Figures & Pictures  ======*/
+/*----------  Pages  ----------*/
+/*================================
+=            Homepage            =
+================================*/
+/*=====  End of Homepage  ======*/
+/*============================
+=            Blog            =
+============================*/
+/*=====  End of Blog  ======*/
 /*=====  End of Styles  ======*/

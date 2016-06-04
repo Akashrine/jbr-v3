@@ -2,6 +2,20 @@
 =            Styles            =
 ==============================*/
 
+/*----------  Base  ----------*/
+@import "base/reset";
+@import "base/config";
+@import "base/base";
 
+/*----------  Partials  ----------*/
+@import "partials/header";
+@import "partials/footer";
+
+/*----------  Components  ----------*/
+@import "components/images";
+
+/*----------  Pages  ----------*/
+@import "pages/home";
+@import "pages/blog";
 
 /*=====  End of Styles  ======*/

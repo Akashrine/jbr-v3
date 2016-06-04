@@ -1,0 +1,58 @@
+/*============================
+=            Base            =
+============================*/
+
+html {
+  font: 100%/1.4 $sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 40rem) {
+  html { font-size: 112%; }
+}
+
+@media (min-width: 64rem) {
+  html { font-size: 120%; }
+}
+
+body {
+    color: color(body-type);
+    font-family: $sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: color(dark);
+  letter-spacing: -.025rem;
+  font-family: $serif;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.313rem;
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 40rem) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 1.5rem; }
+}
+
+/*=====  End of Base  ======*/
