@@ -49,10 +49,78 @@ h3 {
   margin-bottom: .5rem;
 }
 
+p {
+  margin: 0 0 1rem;
+}
+
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+ul {
+  list-style: inside circle;
+  padding-left: 0;
+
+  li {
+    margin-bottom: .25rem;
+  }
+
+  ul,
+  ol {
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+  }
+}
+
+ol {
+  list-style: inside decimal;
+  padding-left: 0;
+
+  li {
+    margin-bottom: .25rem;
+  }
+
+  ul,
+  ol {
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+  }
+}
+
+p + h1,
+p + h2,
+p + h3,
+ul + h1,
+ul + h2,
+ul + h3,
+ol + h1,
+ol + h2,
+ol + h3 {
+  margin-top: 1.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: .5px solid #eee;
+  border-bottom: .5px solid #eee;
+  margin: 1.5rem auto;
+}
+
 @media (min-width: 40rem) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2.25rem; }
   h3 { font-size: 1.5rem; }
 }
+
+
 
 /*=====  End of Base  ======*/
