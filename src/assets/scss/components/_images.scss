@@ -3,5 +3,36 @@
 ==========================================*/
 
 
+img {
+  max-width:  100%;
+}
+
+figure {
+    padding: 1em 1rem 0rem;
+    margin-bottom: 1rem;
+    background: color(white);
+
+    figcaption {
+        font-size: 1.125rem;
+
+        &:before {
+            counter-increment: figure;
+            content: "Figure " counter(figure) ": ";
+            opacity: 0.5;
+        }
+    }
+    &.awesome{ // abstract picture
+        width:150%;
+        position: relative;
+        left:-25%;
+    }
+    &.left,&.right{
+        max-width: 25rem;
+        float: left;
+    }
+    &.right{
+        float: right;
+    }
+}
 
 /*=====  End of Figures & Pictures  ======*/
