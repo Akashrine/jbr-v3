@@ -26,6 +26,21 @@ $colors: (brand: #bf616a, brand-annex: #016773, dark: #222, grey: #cccccc, white
 }
 
 /*----------  Typo  Vars ----------*/
+@font-face {
+    font-family: "NoeDisplayMedium";
+    src: url('fonts/NoeDisplayMedium.eot'); /* IE9 Compat Modes */
+    src: url('fonts/NoeDisplayMedium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/NoeDisplayMedium.woff') format('woff'); /* Pretty Modern Browsers */
+}
 
+$brand:'NoeDisplayMedium';
+
+/*----------  Grid  ----------*/
+$column-width     : 100px;
+$gutter-width     : 0px;
+$columns          : 12;
+$content-width    : 64rem;
+$post-width       : 64rem;
+$total-width      : 100%;
 
 /*=====  End of Config  ======*/

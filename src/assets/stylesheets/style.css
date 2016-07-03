@@ -4,6 +4,27 @@
 ==============================*/
 /*----------  Base  ----------*/
 /*==============================
+=            Mixins            =
+==============================*/
+/**
+*
+* Mixin for breakpoints
+*
+**/
+/**
+ * Mixin handling breakpoints for media queries / Mobile First
+ */
+/**
+*
+* Clearfix
+*
+**/
+/*=========================================================================
+=            // Semantic.gs //             =
+=========================================================================*/
+/*==========  Grid part  ==========*/
+/*=====  End of Layout and Grid (kind of)  ======*/
+/*==============================
 =            Reset             =
 ==============================*/
 /**
@@ -333,6 +354,14 @@ caption {
 *
 **/
 /*----------  Typo  Vars ----------*/
+@font-face {
+  font-family: "NoeDisplayMedium";
+  src: url("fonts/NoeDisplayMedium.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/NoeDisplayMedium.eot?#iefix") format("embedded-opentype"), url("fonts/NoeDisplayMedium.woff") format("woff");
+  /* Pretty Modern Browsers */ }
+
+/*----------  Grid  ----------*/
 /*=====  End of Config  ======*/
 /*============================
 =            Base            =
@@ -360,19 +389,21 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
   color: #222;
   letter-spacing: -.025rem;
-  font-family: "Source Serif Pro", serif; }
+  font-family: "NoeDisplayMedium"; }
 
 h1 {
   font-size: 2.25rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  line-height: 1.4; }
 
 h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  line-height: 1.25; }
 
 h3 {
   font-size: 1.313rem;
@@ -514,6 +545,73 @@ pre code {
     font-size: 2.25rem; }
   h3 {
     font-size: 1.5rem; } }
+
+/*========================================
+=            Layout and Grid (kind of)            =
+========================================*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  width: 100%;
+  *zoom: 1; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
+
+.container, .post {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  position: relative;
+  *zoom: 1; }
+  .container:before, .post:before, .container:after, .post:after {
+    content: "";
+    display: table; }
+  .container:after, .post:after {
+    clear: both; }
+
+.container, .post {
+  padding: 0 1rem; }
+  @media (min-width: 28em) {
+    .container, .post {
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 1rem 2rem; } }
+
+.header h1 {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin: 0 0%; }
+  @media (min-width: 38em) {
+    .header h1 {
+      display: inline;
+      float: left;
+      width: 33.33333%;
+      margin: 0 0%; } }
+
+.header nav {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin: 0 0%;
+  margin: 2rem auto 0;
+  text-align: left; }
+  @media (min-width: 48em) {
+    .header nav {
+      display: inline;
+      float: left;
+      width: 41.66667%;
+      margin: 0 0%;
+      margin-left: 25%;
+      text-align: right; } }
 
 /*=====  End of Base  ======*/
 .hll {
@@ -710,6 +808,53 @@ pre code {
 /*==============================
 =            Header            =
 ==============================*/
+.header[role=banner] {
+  padding: 3rem 0 2rem; }
+
+.header__logo {
+  font-size: 0.65rem;
+  letter-spacing: 0.0975em;
+  text-transform: uppercase;
+  line-height: 0.91rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: color .6s ease-in;
+  transition: color .6s ease-in; }
+  .header__logo a {
+    text-decoration: none;
+    color: #222; }
+    .header__logo a:hover {
+      color: #bf616a; }
+      .header__logo a:hover span {
+        color: #016773; }
+    .header__logo a span {
+      font-weight: 400;
+      color: #888;
+      letter-spacing: -0.01em;
+      font-size: 0.6rem;
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-transition: color .6s ease-in;
+      transition: color .6s ease-in; }
+
+.main-nav {
+  -webkit-transition: opacity 0.2s linear 0s;
+  transition: opacity 0.2s linear 0s;
+  text-align: right; }
+  .main-nav a {
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #222;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 2rem 0 0;
+    padding: 1rem 0 0 0;
+    position: relative;
+    top: -1rem; }
+    .main-nav a:hover, .main-nav a.active, .main-nav a.focus {
+      color: #bf616a; }
+
 /*=====  End of Header  ======*/
 /*==============================
 =            Footer            =

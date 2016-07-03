@@ -27,21 +27,23 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
   color: color(dark);
   letter-spacing: -.025rem;
-  font-family: $serif;
+  font-family: $brand;
 }
 
 h1 {
   font-size: 2.25rem;
   margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  line-height:1.25;
 }
 
 h3 {
@@ -211,6 +213,69 @@ pre code {
   h2 { font-size: 2.25rem; }
   h3 { font-size: 1.5rem; }
 }
+
+/*========================================
+=            Layout and Grid (kind of)            =
+========================================*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    @include clearfix;
+}
+
+%container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    position: relative;
+    @include clearfix;
+}
+
+.container,.post {
+    @extend %container;
+    padding: 0 1rem;
+
+    @include breakpoint(small) {
+        max-width: $content-width;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+}
+
+.header {
+    h1 {
+        @include column(12);
+
+        @include breakpoint(medium) {
+            @include column(4);
+        }
+    }
+
+    nav {
+        @include column(12);
+
+        margin: 2rem auto 0;
+        text-align: left;
+
+        @include breakpoint(large) {
+            @include column(5);
+
+            @include push(3);
+
+            text-align: right;
+        }
+    }
+}
+
 
 
 /*=====  End of Base  ======*/
