@@ -1,6 +1,31 @@
 /*==============================
 =            Header            =
 ==============================*/
+.header {
+    h1 {
+        @include column(12);
+
+        @include breakpoint(medium) {
+            @include column(4);
+        }
+    }
+
+    nav {
+        @include column(12);
+
+        margin: 2rem auto 0;
+        text-align: left;
+
+        @include breakpoint(large) {
+            @include column(5);
+
+            @include push(3);
+
+            text-align: right;
+        }
+    }
+}
+
 .header[role=banner] {
     padding: 3rem 0 2rem;
 }

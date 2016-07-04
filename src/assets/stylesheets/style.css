@@ -409,6 +409,13 @@ h3 {
   font-size: 1.313rem;
   margin-bottom: .5rem; }
 
+h4 {
+  font-size: 1.15rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #888;
+  font-weight: 500; }
+
 p {
   margin: 0 0 1rem; }
 
@@ -584,34 +591,6 @@ body {
       max-width: 64rem;
       margin: 0 auto;
       padding: 1rem 2rem; } }
-
-.header h1 {
-  display: inline;
-  float: left;
-  width: 100%;
-  margin: 0 0%; }
-  @media (min-width: 38em) {
-    .header h1 {
-      display: inline;
-      float: left;
-      width: 33.33333%;
-      margin: 0 0%; } }
-
-.header nav {
-  display: inline;
-  float: left;
-  width: 100%;
-  margin: 0 0%;
-  margin: 2rem auto 0;
-  text-align: left; }
-  @media (min-width: 48em) {
-    .header nav {
-      display: inline;
-      float: left;
-      width: 41.66667%;
-      margin: 0 0%;
-      margin-left: 25%;
-      text-align: right; } }
 
 /*=====  End of Base  ======*/
 .hll {
@@ -808,6 +787,34 @@ body {
 /*==============================
 =            Header            =
 ==============================*/
+.header h1 {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin: 0 0%; }
+  @media (min-width: 38em) {
+    .header h1 {
+      display: inline;
+      float: left;
+      width: 33.33333%;
+      margin: 0 0%; } }
+
+.header nav {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin: 0 0%;
+  margin: 2rem auto 0;
+  text-align: left; }
+  @media (min-width: 48em) {
+    .header nav {
+      display: inline;
+      float: left;
+      width: 41.66667%;
+      margin: 0 0%;
+      margin-left: 25%;
+      text-align: right; } }
+
 .header[role=banner] {
   padding: 3rem 0 2rem; }
 

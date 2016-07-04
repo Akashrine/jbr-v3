@@ -51,6 +51,14 @@ h3 {
   margin-bottom: .5rem;
 }
 
+h4{
+    font-size:1.15rem;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    color: color(note-text);
+    font-weight: 500;
+}
+
 p {
   margin: 0 0 1rem;
 }
@@ -250,32 +258,5 @@ body {
         padding: 1rem 2rem;
     }
 }
-
-.header {
-    h1 {
-        @include column(12);
-
-        @include breakpoint(medium) {
-            @include column(4);
-        }
-    }
-
-    nav {
-        @include column(12);
-
-        margin: 2rem auto 0;
-        text-align: left;
-
-        @include breakpoint(large) {
-            @include column(5);
-
-            @include push(3);
-
-            text-align: right;
-        }
-    }
-}
-
-
 
 /*=====  End of Base  ======*/
