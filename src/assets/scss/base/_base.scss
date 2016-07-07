@@ -3,18 +3,22 @@
 ============================*/
 
 html {
-  font: 100%/1.4 $sans-serif;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+    font: 100% / 1.4 $sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 @media (min-width: 40rem) {
-  html { font-size: 112%; }
+    html {
+        font-size: 112%;
+    }
 }
 
 @media (min-width: 64rem) {
-  html { font-size: 120%; }
+    html {
+        font-size: 120%;
+    }
 }
 
 body {
@@ -25,85 +29,93 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-weight: 600;
-  line-height: 1.1;
-  color: color(dark);
-  letter-spacing: -.025rem;
-  font-family: $brand;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: color(dark);
+    letter-spacing: -.025rem;
+    font-family: $brand;
 }
 
 h1 {
-  font-size: 2.25rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  line-height:1.25;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
 }
 
 h3 {
-  font-size: 1.313rem;
-  margin-bottom: .5rem;
+    font-size: 1.313rem;
+    margin-bottom: .5rem;
 }
 
-h4{
-    font-size:1.15rem;
+h4, .subhead {
+    @include breakpoint(large) {
+        font-size: 1.15rem;
+        color: color(note-text);
+    }
+
+
+    position: relative;
     text-transform: lowercase;
     font-variant: small-caps;
+    font-weight: normal;
+    font-size: 1.15rem;
     color: color(note-text);
-    font-weight: 500;
+    top: -0.5rem;
 }
 
 p {
-  margin: 0 0 1rem;
+    margin: 0 0 1rem;
 }
 
 ul, ol, dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 dt {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 dd {
-  margin-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 
 ul {
-  list-style: inside circle;
-  padding-left: 0;
+    list-style: inside circle;
+    padding-left: 0;
 
-  li {
-    margin-bottom: .25rem;
-  }
+    li {
+        margin-bottom: .25rem;
+    }
 
-  ul,
-  ol {
-    margin-top: .25rem;
-    margin-bottom: .5rem;
-  }
+    ul,
+    ol {
+        margin-top: .25rem;
+        margin-bottom: .5rem;
+    }
 }
 
 ol {
-  list-style: inside decimal;
-  padding-left: 0;
+    list-style: inside decimal;
+    padding-left: 0;
 
-  li {
-    margin-bottom: .25rem;
-  }
+    li {
+        margin-bottom: .25rem;
+    }
 
-  ul,
-  ol {
-    margin-top: .25rem;
-    margin-bottom: .5rem;
-  }
+    ul,
+    ol {
+        margin-top: .25rem;
+        margin-bottom: .5rem;
+    }
 }
 
 p + h1,
@@ -115,122 +127,142 @@ ul + h3,
 ol + h1,
 ol + h2,
 ol + h3 {
-  margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-p a{
-  border-bottom: 1px solid color(brand);
-  box-shadow: inset 0 -7px 0 color(brand);
-  color: rgba(15, 35, 59, .55);
-  transition: all .25s ease-in-out;
-  padding: 2px 2px 0 2px;
-  text-decoration: none;
-  &:hover {
-    background-color: color(brand);
-    color: rgba(255, 255, 255, .70);
-  }
+p a {
+    border-bottom: 1px solid color(brand);
+    box-shadow: inset 0 -7px 0 color(brand);
+    color: rgba(15, 35, 59, 0.55);
+    transition: all .25s ease-in-out;
+    padding: 2px 2px 0 2px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: color(brand);
+        color: rgba(255, 255, 255, 0.7);
+    }
 }
 
 hr {
-  border: 0;
-  border-top: .5px solid #eee;
-  border-bottom: .5px solid #eee;
-  margin: 1.5rem auto;
+    border: 0;
+    border-top: .5px solid #eee;
+    border-bottom: .5px solid #eee;
+    margin: 1.5rem auto;
 }
 
 abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
+    cursor: help;
+    border-bottom: 1px dotted #e5e5e5;
 }
 
 blockquote {
-  padding: 0 0 0 1.5rem;
-  margin: 0 2rem 1rem 0;
-  color: #999;
-  border-left: .5rem solid #e5e5e5;
+    padding: 0 0 0 1.5rem;
+    margin: 0 2rem 1rem 0;
+    color: #999;
+    border-left: .5rem solid #e5e5e5;
 
-  p:last-child {
-    margin-bottom: 0;
-  }
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
+
 blockquote.awesome {
-  text-align: center;
-  font-size: 20px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  border-left: 0;
-  position: relative;
-  quotes: "“" "”" "‘" "’";
-  &:after {
-    color: #ccc;
-    font-family: $sans-serif;
-    content: open-quote;
-    font-size: 80px;
-    position: absolute;
-    left: 50%;
-    bottom: calc(100% - 20px);
-    background: #fff;
-    height: 55px;
-    width: 55px;
-    line-height: normal;
     text-align: center;
-    transform: translateX(-50%);
-  }
-  p {
-    padding: 20px;
-  }
+    font-size: 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 0;
+    position: relative;
+    quotes: "“" "”" "‘" "’";
+    &:after {
+        color: #ccc;
+        font-family: $sans-serif;
+        content: open-quote;
+        font-size: 80px;
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% - 20px);
+        background: #fff;
+        height: 55px;
+        width: 55px;
+        line-height: normal;
+        text-align: center;
+        transform: translateX(-50%);
+    }
+
+    p {
+        padding: 20px;
+    }
 }
 
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
 code {
-  padding: .25em .5em;
-  font-size: 85%;
-  color: color(brand);
-  background-color: color(white);
-  border-radius: 3px;
+    padding: .25em .5em;
+    font-size: 85%;
+    color: color(brand);
+    background-color: color(white);
+    border-radius: 3px;
 }
 
 pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding: 0.2rem;
-  font-size: .8rem;
-  line-height: 1.4;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  // word-wrap: break-word;
-  background-color: color(white);
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    font-size: .8rem;
+    line-height: 1.4;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+
+    // word-wrap: break-word;
+    background-color: color(white);
 }
 
 pre code {
-  padding: 0;
-  font-size: 100%;
-  color: inherit;
-  background-color: transparent;
+    padding: 0;
+    font-size: 100%;
+    color: inherit;
+    background-color: transparent;
 }
 
-.emphasize{
-  font-style: italic;
+.emphasize {
+    font-style: italic;
 }
-.subhead{
-  position: relative;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 0.9rem;
-  color:color(note-text);
-  top: -0.5rem;
+
+.subhead {
+    @include breakpoint(large) {
+        font-size: 1.15rem;
+        color: color(note-text);
+    }
+
+
+    position: relative;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: color(note-text);
+    top: -0.5rem;
 }
 
 @media (min-width: 40rem) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2.25rem; }
-  h3 { font-size: 1.5rem; }
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
 }
 
 /*========================================
@@ -239,15 +271,16 @@ pre code {
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
     width: 100%;
+
     @include clearfix;
 }
 
@@ -256,11 +289,13 @@ body {
     margin: 0 auto;
     padding: 2rem 1.5rem;
     position: relative;
+
     @include clearfix;
 }
 
-.container,.post {
+.container, .post {
     @extend %container;
+
     padding: 0 1rem;
 
     @include breakpoint(small) {

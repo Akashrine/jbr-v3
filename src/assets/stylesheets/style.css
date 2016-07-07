@@ -409,12 +409,18 @@ h3 {
   font-size: 1.313rem;
   margin-bottom: .5rem; }
 
-h4 {
-  font-size: 1.15rem;
+h4, .subhead {
+  position: relative;
   text-transform: lowercase;
   font-variant: small-caps;
+  font-weight: normal;
+  font-size: 1.15rem;
   color: #888;
-  font-weight: 500; }
+  top: -0.5rem; }
+  @media (min-width: 48em) {
+    h4, .subhead {
+      font-size: 1.15rem;
+      color: #888; } }
 
 p {
   margin: 0 0 1rem; }
@@ -550,11 +556,16 @@ pre code {
 
 .subhead {
   position: relative;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-variant: small-caps;
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #888;
   top: -0.5rem; }
+  @media (min-width: 48em) {
+    .subhead {
+      font-size: 1.15rem;
+      color: #888; } }
 
 @media (min-width: 40rem) {
   h1 {
@@ -830,7 +841,7 @@ body {
   padding: 3rem 0 2rem; }
 
 .header__logo {
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   letter-spacing: 0.0975em;
   text-transform: uppercase;
   line-height: 0.91rem;
@@ -839,6 +850,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition: color .6s ease-in;
   transition: color .6s ease-in; }
+  @media (min-width: 48em) {
+    .header__logo {
+      font-size: 0.65rem; } }
   .header__logo a {
     text-decoration: none;
     color: #222; }
@@ -850,17 +864,20 @@ body {
       font-weight: 400;
       color: #888;
       letter-spacing: -0.01em;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
       -webkit-transition: color .6s ease-in;
       transition: color .6s ease-in; }
+      @media (min-width: 48em) {
+        .header__logo a span {
+          font-size: 0.6rem; } }
 
 .main-nav {
   -webkit-transition: opacity 0.2s linear 0s;
   transition: opacity 0.2s linear 0s;
   text-align: right; }
   .main-nav a {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #222;
@@ -870,6 +887,9 @@ body {
     padding: 1rem 0 0 0;
     position: relative;
     top: -1rem; }
+    @media (min-width: 48em) {
+      .main-nav a {
+        font-size: 0.65rem; } }
     .main-nav a:hover, .main-nav a.active, .main-nav a.focus {
       color: #bf616a; }
     .main-nav a:last-child {
