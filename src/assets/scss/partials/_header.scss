@@ -88,6 +88,9 @@
         &:hover, &.active, &.focus {
             color: color(brand);
         }
+        &:last-child{
+            margin-right:0;
+        }
     }
 }
 /*=====  End of Header  ======*/

@@ -215,6 +215,17 @@ pre code {
   background-color: transparent;
 }
 
+.emphasize{
+  font-style: italic;
+}
+.subhead{
+  position: relative;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color:color(note-text);
+  top: -0.5rem;
+}
 
 @media (min-width: 40rem) {
   h1 { font-size: 3rem; }

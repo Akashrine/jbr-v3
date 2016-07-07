@@ -1,7 +1,41 @@
 /*================================
 =            Homepage            =
 ================================*/
+section[role=presentation] {
+    @include breakpoint(large) {
+        column-count: 2;
+    }
 
 
+    .headline {
+        @include breakpoint(large) {
+            font-size: 1.3rem;
+            margin-left: 3rem;
+        }
+
+
+        font-family: $serif;
+        font-size: 1.1rem;
+        color: color(brand);
+        line-height: 1.6;
+        position: relative;
+        margin-left: 0;
+
+        &:before {
+            display: none;
+
+            @include breakpoint(large) {
+                content: '';
+                display: block;
+                background-color: color(brand);
+                height: 3px;
+                width: 30px;
+                position: absolute;
+                top: 1rem;
+                left: -3rem;
+            }
+        }
+    }
+}
 
 /*=====  End of Homepage  ======*/

@@ -545,6 +545,17 @@ pre code {
   color: inherit;
   background-color: transparent; }
 
+.emphasize {
+  font-style: italic; }
+
+.subhead {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #888;
+  top: -0.5rem; }
+
 @media (min-width: 40rem) {
   h1 {
     font-size: 3rem; }
@@ -588,7 +599,7 @@ body {
   padding: 0 1rem; }
   @media (min-width: 28em) {
     .container, .post {
-      max-width: 64rem;
+      max-width: 50rem;
       margin: 0 auto;
       padding: 1rem 2rem; } }
 
@@ -861,6 +872,8 @@ body {
     top: -1rem; }
     .main-nav a:hover, .main-nav a.active, .main-nav a.focus {
       color: #bf616a; }
+    .main-nav a:last-child {
+      margin-right: 0; }
 
 /*=====  End of Header  ======*/
 /*==============================
@@ -899,6 +912,36 @@ figure {
 /*================================
 =            Homepage            =
 ================================*/
+@media (min-width: 48em) {
+  section[role=presentation] {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2; } }
+
+section[role=presentation] .headline {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.1rem;
+  color: #bf616a;
+  line-height: 1.6;
+  position: relative;
+  margin-left: 0; }
+  @media (min-width: 48em) {
+    section[role=presentation] .headline {
+      font-size: 1.3rem;
+      margin-left: 3rem; } }
+  section[role=presentation] .headline:before {
+    display: none; }
+    @media (min-width: 48em) {
+      section[role=presentation] .headline:before {
+        content: '';
+        display: block;
+        background-color: #bf616a;
+        height: 3px;
+        width: 30px;
+        position: absolute;
+        top: 1rem;
+        left: -3rem; } }
+
 /*=====  End of Homepage  ======*/
 /*============================
 =            Blog            =
