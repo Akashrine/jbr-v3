@@ -809,33 +809,34 @@ body {
 /*==============================
 =            Header            =
 ==============================*/
-.header h1 {
-  display: inline;
-  float: left;
-  width: 100%;
-  margin: 0 0%; }
-  @media (min-width: 38em) {
-    .header h1 {
-      display: inline;
-      float: left;
-      width: 33.33333%;
-      margin: 0 0%; } }
-
-.header nav {
-  display: inline;
-  float: left;
-  width: 100%;
-  margin: 0 0%;
-  margin: 2rem auto 0;
-  text-align: left; }
-  @media (min-width: 48em) {
-    .header nav {
-      display: inline;
-      float: left;
-      width: 41.66667%;
-      margin: 0 0%;
-      margin-left: 25%;
-      text-align: right; } }
+.header {
+  margin-bottom: 5rem; }
+  .header h1 {
+    display: inline;
+    float: left;
+    width: 99.24242%;
+    margin: 0 0.37879%; }
+    @media (min-width: 38em) {
+      .header h1 {
+        display: inline;
+        float: left;
+        width: 32.57576%;
+        margin: 0 0.37879%; } }
+  .header nav {
+    display: inline;
+    float: left;
+    width: 99.24242%;
+    margin: 0 0.37879%;
+    margin: 2rem auto 0;
+    text-align: left; }
+    @media (min-width: 48em) {
+      .header nav {
+        display: inline;
+        float: left;
+        width: 40.90909%;
+        margin: 0 0.37879%;
+        margin-left: 25.37879%;
+        text-align: right; } }
 
 .header[role=banner] {
   padding: 3rem 0 2rem; }
@@ -932,35 +933,47 @@ figure {
 /*================================
 =            Homepage            =
 ================================*/
-@media (min-width: 48em) {
-  section[role=presentation] {
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2; } }
-
-section[role=presentation] .headline {
-  font-family: "Source Serif Pro", serif;
-  font-size: 1.1rem;
-  color: #bf616a;
-  line-height: 1.6;
-  position: relative;
-  margin-left: 0; }
-  @media (min-width: 48em) {
-    section[role=presentation] .headline {
-      font-size: 1.3rem;
-      margin-left: 3rem; } }
-  section[role=presentation] .headline:before {
-    display: none; }
+section[role=presentation] {
+  *zoom: 1; }
+  section[role=presentation]:before, section[role=presentation]:after {
+    content: "";
+    display: table; }
+  section[role=presentation]:after {
+    clear: both; }
+  section[role=presentation] .headline {
+    font-family: "Source Serif Pro", serif;
+    font-size: 1.1rem;
+    color: #bf616a;
+    line-height: 1.6;
+    position: relative;
+    margin-left: 0; }
     @media (min-width: 48em) {
-      section[role=presentation] .headline:before {
-        content: '';
-        display: block;
-        background-color: #bf616a;
-        height: 3px;
-        width: 30px;
-        position: absolute;
-        top: 1rem;
-        left: -3rem; } }
+      section[role=presentation] .headline {
+        font-size: 1.3rem;
+        margin-left: 3rem;
+        display: inline;
+        float: left;
+        width: 49.24242%;
+        margin: 0 0.37879%; } }
+    section[role=presentation] .headline:before {
+      display: none; }
+      @media (min-width: 48em) {
+        section[role=presentation] .headline:before {
+          content: '';
+          display: block;
+          background-color: #bf616a;
+          height: 3px;
+          width: 30px;
+          position: absolute;
+          top: 1rem;
+          left: -3rem; } }
+  @media (min-width: 48em) {
+    section[role=presentation] .introduction {
+      display: inline;
+      float: left;
+      width: 40.90909%;
+      margin: 0 0.37879%;
+      margin-left: 8.71212%; } }
 
 /*=====  End of Homepage  ======*/
 /*============================

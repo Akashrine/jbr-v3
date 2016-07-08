@@ -2,6 +2,7 @@
 =            Header            =
 ==============================*/
 .header {
+    margin-bottom: 5rem;
     h1 {
         @include column(12);
 

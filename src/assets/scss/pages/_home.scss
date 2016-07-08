@@ -2,15 +2,14 @@
 =            Homepage            =
 ================================*/
 section[role=presentation] {
-    @include breakpoint(large) {
-        column-count: 2;
-    }
-
+    @include clearfix;
 
     .headline {
         @include breakpoint(large) {
             font-size: 1.3rem;
             margin-left: 3rem;
+
+            @include column(6);
         }
 
 
@@ -34,6 +33,13 @@ section[role=presentation] {
                 top: 1rem;
                 left: -3rem;
             }
+        }
+    }
+
+    .introduction {
+        @include breakpoint(large) {
+            @include column(5);
+            @include push(1);
         }
     }
 }
