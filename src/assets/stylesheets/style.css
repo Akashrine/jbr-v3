@@ -467,16 +467,31 @@ ol + h3 {
   margin-top: 1.5rem; }
 
 p a {
-  border-bottom: 1px solid #bf616a;
-  box-shadow: inset 0 -7px 0 #bf616a;
-  color: rgba(15, 35, 59, 0.55);
-  -webkit-transition: all .25s ease-in-out;
-          transition: all .25s ease-in-out;
-  padding: 2px 2px 0 2px;
-  text-decoration: none; }
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #bf616a; }
   p a:hover {
-    background-color: #bf616a;
-    color: rgba(255, 255, 255, 0.7); }
+    color: #000; }
+
+p a:after {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  width: 100%;
+  height: .1em;
+  background: #bf616a;
+  opacity: .3;
+  content: '';
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out; }
+
+p a:hover:after {
+  background: #bf616a;
+  height: 1.12em;
+  top: 25%;
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out; }
 
 hr {
   border: 0;
@@ -933,6 +948,44 @@ figure {
 /*================================
 =            Homepage            =
 ================================*/
+header[role=header] {
+  margin-bottom: 2rem; }
+  header[role=header] h2.bording {
+    margin-bottom: 0.8rem; }
+  header[role=header] ul li {
+    list-style: none;
+    display: inline-block; }
+    header[role=header] ul li a, header[role=header] ul li svg {
+      display: block; }
+    header[role=header] ul li a {
+      position: relative;
+      height: 16px;
+      height: 1.6rem;
+      width: 16px;
+      width: 1.6rem;
+      color: #016773;
+      fill: #016773; }
+      header[role=header] ul li a:hover {
+        background: #016773;
+        border-radius: 100%;
+        color: #f9f9f9;
+        fill: #f9f9f9;
+        -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
+                transition: background-color .5s, transform .5s ease-out; }
+    header[role=header] ul li svg {
+      height: 100%;
+      width: 100%; }
+    header[role=header] ul li em {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: -.75em;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+
 section[role=presentation] {
   *zoom: 1; }
   section[role=presentation]:before, section[role=presentation]:after {
@@ -974,6 +1027,9 @@ section[role=presentation] {
       width: 40.90909%;
       margin: 0 0.37879%;
       margin-left: 8.71212%; } }
+
+footer[role=presentation] {
+  margin-top: 2rem; }
 
 /*=====  End of Homepage  ======*/
 /*============================

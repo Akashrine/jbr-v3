@@ -1,6 +1,63 @@
 /*================================
 =            Homepage            =
 ================================*/
+header[role=header] {
+    margin-bottom: 2rem;
+
+    h2.bording {
+        margin-bottom: 0.8rem;
+    }
+
+    ul li {
+        list-style: none;
+        display: inline-block;
+
+        a, svg {
+            display: block;
+        }
+
+        a {
+            position: relative;
+
+            // IE8
+            height: 16px;
+
+            // IE8
+            height: 1.6rem;
+            width: 16px;
+
+            // IE8
+            width: 1.6rem;
+            color: color(brand-annex);
+            fill: color(brand-annex);
+            &:hover{
+                background:color(brand-annex);
+                border-radius:100%;
+                color:color(white);
+                fill:color(white);
+                transition:background-color .5s, transform .5s ease-out;
+            }
+        }
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+
+        em {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: -.75em;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
 section[role=presentation] {
     @include clearfix;
 
@@ -39,9 +96,12 @@ section[role=presentation] {
     .introduction {
         @include breakpoint(large) {
             @include column(5);
+
             @include push(1);
         }
     }
 }
-
+footer[role=presentation]{
+    margin-top: 2rem;
+}
 /*=====  End of Homepage  ======*/

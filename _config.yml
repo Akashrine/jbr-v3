@@ -41,5 +41,6 @@ social:
     twitter: http://twitter.com/akashrine/
     lastfm: http://lastfm.fr/user/akashrine
     github: http://github.com/akashrine
+    dribbble: http://dribbble.com/akashrine
 
 gems: [jekyll-paginate, jekyll-gist]
