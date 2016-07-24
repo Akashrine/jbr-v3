@@ -33,7 +33,7 @@
  *
  */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900,300);
-@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Martel:900);
 article,
 aside,
 details,
@@ -494,10 +494,12 @@ p a:hover:after {
           transition: all .3s ease-in-out; }
 
 hr {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   border: 0;
-  border-top: .5px solid #eee;
-  border-bottom: .5px solid #eee;
-  margin: 1.5rem auto; }
+  border-bottom: 4px solid #cccccc;
+  max-width: 5rem;
+  margin-left: 0; }
 
 abbr[title] {
   cursor: help;
@@ -824,20 +826,20 @@ body {
 /*==============================
 =            Header            =
 ==============================*/
-.header {
-  margin-bottom: 5rem; }
-  .header h1 {
+.header[role=banner] {
+  margin: 10vh 0; }
+  .header[role=banner] h1 {
     display: inline;
     float: left;
     width: 99.24242%;
     margin: 0 0.37879%; }
     @media (min-width: 38em) {
-      .header h1 {
+      .header[role=banner] h1 {
         display: inline;
         float: left;
         width: 32.57576%;
         margin: 0 0.37879%; } }
-  .header nav {
+  .header[role=banner] nav {
     display: inline;
     float: left;
     width: 99.24242%;
@@ -845,7 +847,7 @@ body {
     margin: 2rem auto 0;
     text-align: left; }
     @media (min-width: 48em) {
-      .header nav {
+      .header[role=banner] nav {
         display: inline;
         float: left;
         width: 40.90909%;
@@ -853,15 +855,12 @@ body {
         margin-left: 25.37879%;
         text-align: right; } }
 
-.header[role=banner] {
-  padding: 3rem 0 2rem; }
-
 .header__logo {
   font-size: 0.85rem;
   letter-spacing: 0.0975em;
   text-transform: uppercase;
   line-height: 0.91rem;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Martel", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition: color .6s ease-in;
@@ -907,7 +906,21 @@ body {
       .main-nav a {
         font-size: 0.65rem; } }
     .main-nav a:hover, .main-nav a.active, .main-nav a.focus {
-      color: #bf616a; }
+      color: #bf616a;
+      position: relative; }
+      .main-nav a:hover:before, .main-nav a.active:before, .main-nav a.focus:before {
+        content: '';
+        display: block;
+        background-color: #bf616a;
+        height: 3px;
+        width: 15px;
+        position: absolute;
+        top: 2.5rem;
+        left: 0rem; }
+    .main-nav a:hover {
+      color: #222; }
+      .main-nav a:hover:before {
+        background-color: #222; }
     .main-nav a:last-child {
       margin-right: 0; }
 
@@ -948,43 +961,13 @@ figure {
 /*================================
 =            Homepage            =
 ================================*/
-header[role=header] {
-  margin-bottom: 2rem; }
-  header[role=header] h2.bording {
-    margin-bottom: 0.8rem; }
-  header[role=header] ul li {
-    list-style: none;
-    display: inline-block; }
-    header[role=header] ul li a, header[role=header] ul li svg {
-      display: block; }
-    header[role=header] ul li a {
-      position: relative;
-      height: 16px;
-      height: 1.6rem;
-      width: 16px;
-      width: 1.6rem;
-      color: #016773;
-      fill: #016773; }
-      header[role=header] ul li a:hover {
-        background: #016773;
-        border-radius: 100%;
-        color: #f9f9f9;
-        fill: #f9f9f9;
-        -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
-                transition: background-color .5s, transform .5s ease-out; }
-    header[role=header] ul li svg {
-      height: 100%;
-      width: 100%; }
-    header[role=header] ul li em {
-      font-size: 14px;
-      line-height: 1.5;
-      margin-top: -.75em;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      right: 0;
-      bottom: 0;
-      left: 0; }
+header[role=header] h2.bording {
+  margin: 0.8rem 0;
+  width: 80%; }
+
+header[role=header] .min {
+  font-size: 0.8rem;
+  letter-spacing: 1px; }
 
 section[role=presentation] {
   *zoom: 1; }
@@ -994,20 +977,22 @@ section[role=presentation] {
   section[role=presentation]:after {
     clear: both; }
   section[role=presentation] .headline {
-    font-family: "Source Serif Pro", serif;
-    font-size: 1.1rem;
-    color: #bf616a;
-    line-height: 1.6;
     position: relative;
     margin-left: 0; }
     @media (min-width: 48em) {
       section[role=presentation] .headline {
-        font-size: 1.3rem;
-        margin-left: 3rem;
         display: inline;
         float: left;
         width: 49.24242%;
         margin: 0 0.37879%; } }
+    section[role=presentation] .headline p {
+      font-family: "NoeDisplayMedium";
+      font-size: 1.2rem;
+      color: #bf616a;
+      line-height: 1.6; }
+      @media (min-width: 48em) {
+        section[role=presentation] .headline p {
+          font-size: 1.4rem; } }
     section[role=presentation] .headline:before {
       display: none; }
       @media (min-width: 48em) {
@@ -1029,7 +1014,42 @@ section[role=presentation] {
       margin-left: 8.71212%; } }
 
 footer[role=presentation] {
-  margin-top: 2rem; }
+  margin-top: 3vh; }
+
+/*Social*/
+ul.social li {
+  list-style: none;
+  display: inline-block; }
+  ul.social li a, ul.social li svg {
+    display: block; }
+  ul.social li a {
+    position: relative;
+    height: 16px;
+    height: 1.6rem;
+    width: 16px;
+    width: 1.6rem;
+    color: #cccccc;
+    fill: #cccccc; }
+    ul.social li a:hover {
+      background: #bf616a;
+      border-radius: 100%;
+      color: #f9f9f9;
+      fill: #f9f9f9;
+      -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
+              transition: background-color .5s, transform .5s ease-out; }
+  ul.social li svg {
+    height: 100%;
+    width: 100%; }
+  ul.social li em {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: -.75em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0; }
 
 /*=====  End of Homepage  ======*/
 /*============================

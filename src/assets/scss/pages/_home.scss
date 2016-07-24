@@ -2,59 +2,13 @@
 =            Homepage            =
 ================================*/
 header[role=header] {
-    margin-bottom: 2rem;
-
     h2.bording {
-        margin-bottom: 0.8rem;
+        margin: 0.8rem 0;
+        width:80%;
     }
-
-    ul li {
-        list-style: none;
-        display: inline-block;
-
-        a, svg {
-            display: block;
-        }
-
-        a {
-            position: relative;
-
-            // IE8
-            height: 16px;
-
-            // IE8
-            height: 1.6rem;
-            width: 16px;
-
-            // IE8
-            width: 1.6rem;
-            color: color(brand-annex);
-            fill: color(brand-annex);
-            &:hover{
-                background:color(brand-annex);
-                border-radius:100%;
-                color:color(white);
-                fill:color(white);
-                transition:background-color .5s, transform .5s ease-out;
-            }
-        }
-
-        svg {
-            height: 100%;
-            width: 100%;
-        }
-
-        em {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-top: -.75em;
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
+    .min{
+        font-size: 0.8rem;
+        letter-spacing: 1px;
     }
 }
 
@@ -63,19 +17,24 @@ section[role=presentation] {
 
     .headline {
         @include breakpoint(large) {
-            font-size: 1.3rem;
-            margin-left: 3rem;
-
             @include column(6);
         }
 
 
-        font-family: $serif;
-        font-size: 1.1rem;
-        color: color(brand);
-        line-height: 1.6;
         position: relative;
         margin-left: 0;
+
+        p {
+            @include breakpoint(large) {
+                font-size: 1.4rem;
+            }
+
+
+            font-family: $brand;
+            font-size: 1.2rem;
+            color: color(brand);
+            line-height: 1.6;
+        }
 
         &:before {
             display: none;
@@ -101,7 +60,60 @@ section[role=presentation] {
         }
     }
 }
-footer[role=presentation]{
-    margin-top: 2rem;
+
+footer[role=presentation] {
+    margin-top: 3vh;
 }
+
+/*Social*/
+ul.social li {
+    list-style: none;
+    display: inline-block;
+
+    a, svg {
+        display: block;
+    }
+
+    a {
+        position: relative;
+
+        // IE8
+        height: 16px;
+
+        // IE8
+        height: 1.6rem;
+        width: 16px;
+
+        // IE8
+        width: 1.6rem;
+        color: color(grey);
+        fill: color(grey);
+
+        &:hover {
+            background: color(brand);
+            border-radius: 100%;
+            color: color(white);
+            fill: color(white);
+            transition: background-color .5s, transform .5s ease-out;
+        }
+    }
+
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+
+    em {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: -.75em;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
 /*=====  End of Homepage  ======*/

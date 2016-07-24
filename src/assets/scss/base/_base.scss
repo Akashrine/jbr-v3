@@ -159,10 +159,12 @@ p a:hover:after {
 }
 
 hr {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     border: 0;
-    border-top: .5px solid #eee;
-    border-bottom: .5px solid #eee;
-    margin: 1.5rem auto;
+    border-bottom: 4px solid color(grey);
+    max-width: 5rem;
+    margin-left: 0;
 }
 
 abbr[title] {

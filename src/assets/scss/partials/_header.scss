@@ -1,9 +1,9 @@
 /*==============================
 =            Header            =
 ==============================*/
-.header {
-    margin-bottom: 5rem;
-    h1 {
+.header[role=banner] {
+    margin: 10vh 0;
+        h1 {
         @include column(12);
 
         @include breakpoint(medium) {
@@ -27,10 +27,6 @@
     }
 }
 
-.header[role=banner] {
-    padding: 3rem 0 2rem;
-}
-
 .header__logo {
     @include breakpoint(large){
         font-size: 0.65rem;
@@ -39,7 +35,7 @@
     letter-spacing: 0.0975em;
     text-transform: uppercase;
     line-height: 0.91rem;
-    font-family: $sans-serif;
+    font-family: $logo;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-transition: color .6s ease-in;
@@ -97,6 +93,23 @@
 
         &:hover, &.active, &.focus {
             color: color(brand);
+            position: relative;
+            &:before{
+                                content: '';
+                display: block;
+                background-color: color(brand);
+                height: 3px;
+                width: 15px;
+                position: absolute;
+                top: 2.5rem;
+                left: 0rem;
+            }
+        }
+        &:hover{
+            color: color(dark);
+            &:before{
+                background-color:color(dark);
+            }
         }
         &:last-child{
             margin-right:0;
