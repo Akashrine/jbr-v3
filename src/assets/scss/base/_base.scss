@@ -23,7 +23,7 @@ html {
 
 body {
     color: color(body-type);
-    font-family: $sans-serif;
+    font-family: $brand;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -35,18 +35,17 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     color: color(head-type);
     letter-spacing: -.025rem;
-    font-family: $brand;
 }
 
 h1 {
-    font-size: 2.369rem;
-    margin-bottom: 1.777rem;
+    font-size: 2.618rem;
+    margin-bottom: 1.618rem;
     line-height: 1.4;
 }
 
 h2 {
-    font-size: 1.777rem;
-    margin-bottom: 1.777rem;
+    font-size: 1.618rem;
+    margin-bottom: 1.618rem;
     line-height: 1.25;
 }
 

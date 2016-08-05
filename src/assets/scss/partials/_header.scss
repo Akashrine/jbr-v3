@@ -3,7 +3,8 @@
 ==============================*/
 .header[role=banner] {
     margin: 10vh 0;
-        h1 {
+
+    h1 {
         @include column(12);
 
         @include breakpoint(medium) {
@@ -12,6 +13,8 @@
     }
 
     nav {
+        font-family: $sans-serif;
+
         @include column(12);
 
         margin: 2rem auto 0;
@@ -28,9 +31,11 @@
 }
 
 .header__logo {
-    @include breakpoint(large){
+    @include breakpoint(large) {
         font-size: 0.65rem;
     }
+
+
     font-size: 0.85rem;
     letter-spacing: 0.0975em;
     text-transform: uppercase;
@@ -56,9 +61,11 @@
         }
 
         span {
-            @include breakpoint(large){
+            @include breakpoint(large) {
                 font-size: 0.6rem;
             }
+
+
             font-weight: 400;
             color: color(note-text);
             letter-spacing: -0.01em;
@@ -71,15 +78,18 @@
         }
     }
 }
+
 .main-nav {
     -webkit-transition: opacity 0.2s linear 0s;
     transition: opacity 0.2s linear 0s;
     text-align: right;
 
     a {
-        @include breakpoint(large){
+        @include breakpoint(large) {
             font-size: 0.65rem;
         }
+
+
         font-size: 0.85rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -94,8 +104,9 @@
         &:hover, &.active, &.focus {
             color: color(brand);
             position: relative;
-            &:before{
-                                content: '';
+
+            &:before {
+                content: '';
                 display: block;
                 background-color: color(brand);
                 height: 3px;
@@ -105,15 +116,19 @@
                 left: 0rem;
             }
         }
-        &:hover{
+
+        &:hover {
             color: color(dark);
-            &:before{
-                background-color:color(dark);
+
+            &:before {
+                background-color: color(dark);
             }
         }
-        &:last-child{
-            margin-right:0;
+
+        &:last-child {
+            margin-right: 0;
         }
     }
 }
+
 /*=====  End of Header  ======*/

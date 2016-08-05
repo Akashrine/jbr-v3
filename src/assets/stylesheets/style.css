@@ -382,7 +382,7 @@ html {
 
 body {
   color: #555;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "NoeDisplayMedium";
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -392,17 +392,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.1;
   color: #333;
-  letter-spacing: -.025rem;
-  font-family: "NoeDisplayMedium"; }
+  letter-spacing: -.025rem; }
 
 h1 {
-  font-size: 2.369rem;
-  margin-bottom: 1.777rem;
+  font-size: 2.618rem;
+  margin-bottom: 1.618rem;
   line-height: 1.4; }
 
 h2 {
-  font-size: 1.777rem;
-  margin-bottom: 1.777rem;
+  font-size: 1.618rem;
+  margin-bottom: 1.618rem;
   line-height: 1.25; }
 
 h3 {
@@ -840,6 +839,7 @@ body {
         width: 32.57576%;
         margin: 0 0.37879%; } }
   .header[role=banner] nav {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline;
     float: left;
     width: 99.24242%;
@@ -967,7 +967,8 @@ header[role=header] h2.bording {
 
 header[role=header] .min {
   font-size: 0.8rem;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 section[role=presentation] {
   *zoom: 1; }
