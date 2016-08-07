@@ -4,13 +4,13 @@
 
 /*----------  Font Face  ----------*/
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900,300);
-@import url(https://fonts.googleapis.com/css?family=Martel:900);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700);
 
 
 
 
 /*----------  Color  ----------*/
-$colors: (brand: #bf616a, brand-annex: #016773, dark: #222, grey: #cccccc, white: #f9f9f9, body-type: #555, head-type: #333, note-text: #888);
+$colors: (brand: #00ab6a, brand-annex: #34495e, dark: #222, grey: #cccccc, white: #f9f9f9, body-type: #555, head-type: #333, note-text: #888);
 /**
 *
 * Colours | Avoid the use of map-get
@@ -25,16 +25,10 @@ $colors: (brand: #bf616a, brand-annex: #016773, dark: #222, grey: #cccccc, white
 }
 
 /*----------  Typo  Vars ----------*/
-@font-face {
-    font-family: "NoeDisplayMedium";
-    src: url('fonts/NoeDisplayMedium.eot'); /* IE9 Compat Modes */
-    src: url('fonts/NoeDisplayMedium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/NoeDisplayMedium.woff') format('woff'); /* Pretty Modern Browsers */
-}
 
-$brand:'NoeDisplayMedium';
 $sans-serif:'Source Sans Pro','Helvetica Neue', Helvetica, Arial, sans-serif;
-$logo:'Martel',serif;
+$serif:'Source Serif Pro', serif;
+
 
 /*----------  Grid  ----------*/
 $column-width     : 100px;

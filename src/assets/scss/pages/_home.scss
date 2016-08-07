@@ -15,7 +15,7 @@ header[role=header] {
 
 section[role=presentation] {
     @include clearfix;
-
+    font-family: $serif;
     .headline {
         @include breakpoint(large) {
             @include column(6);
@@ -30,8 +30,6 @@ section[role=presentation] {
                 font-size: 1.4rem;
             }
 
-
-            font-family: $brand;
             font-size: 1.2rem;
             color: color(brand);
             line-height: 1.6;
@@ -54,6 +52,7 @@ section[role=presentation] {
     }
 
     .introduction {
+        font-family: $sans-serif;
         @include breakpoint(large) {
             @include column(5);
 

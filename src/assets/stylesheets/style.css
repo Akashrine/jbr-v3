@@ -33,7 +33,7 @@
  *
  */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900,300);
-@import url(https://fonts.googleapis.com/css?family=Martel:900);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700);
 article,
 aside,
 details,
@@ -354,13 +354,6 @@ caption {
 *
 **/
 /*----------  Typo  Vars ----------*/
-@font-face {
-  font-family: "NoeDisplayMedium";
-  src: url("fonts/NoeDisplayMedium.eot");
-  /* IE9 Compat Modes */
-  src: url("fonts/NoeDisplayMedium.eot?#iefix") format("embedded-opentype"), url("fonts/NoeDisplayMedium.woff") format("woff");
-  /* Pretty Modern Browsers */ }
-
 /*----------  Grid  ----------*/
 /*=====  End of Config  ======*/
 /*============================
@@ -382,17 +375,18 @@ html {
 
 body {
   color: #555;
-  font-family: "NoeDisplayMedium";
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
   color: #333;
-  letter-spacing: -.025rem; }
+  letter-spacing: -.025rem;
+  font-family: "Source Serif Pro", serif; }
 
 h1 {
   font-size: 2.618rem;
@@ -469,7 +463,7 @@ p a {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  color: #bf616a; }
+  color: #00ab6a; }
   p a:hover {
     color: #000; }
 
@@ -479,14 +473,14 @@ p a:after {
   left: 0;
   width: 100%;
   height: .1em;
-  background: #bf616a;
+  background: #00ab6a;
   opacity: .3;
   content: '';
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out; }
 
 p a:hover:after {
-  background: #bf616a;
+  background: #00ab6a;
   height: 1.12em;
   top: 25%;
   -webkit-transition: all .3s ease-in-out;
@@ -545,7 +539,7 @@ pre {
 code {
   padding: .25em .5em;
   font-size: 85%;
-  color: #bf616a;
+  color: #00ab6a;
   background-color: #f9f9f9;
   border-radius: 3px; }
 
@@ -860,7 +854,7 @@ body {
   letter-spacing: 0.0975em;
   text-transform: uppercase;
   line-height: 0.91rem;
-  font-family: "Martel", serif;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition: color .6s ease-in;
@@ -872,9 +866,9 @@ body {
     text-decoration: none;
     color: #222; }
     .header__logo a:hover {
-      color: #bf616a; }
+      color: #00ab6a; }
       .header__logo a:hover span {
-        color: #016773; }
+        color: #34495e; }
     .header__logo a span {
       font-weight: 400;
       color: #888;
@@ -906,12 +900,12 @@ body {
       .main-nav a {
         font-size: 0.65rem; } }
     .main-nav a:hover, .main-nav a.active, .main-nav a.focus {
-      color: #bf616a;
+      color: #00ab6a;
       position: relative; }
       .main-nav a:hover:before, .main-nav a.active:before, .main-nav a.focus:before {
         content: '';
         display: block;
-        background-color: #bf616a;
+        background-color: #00ab6a;
         height: 3px;
         width: 15px;
         position: absolute;
@@ -971,7 +965,8 @@ header[role=header] .min {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 section[role=presentation] {
-  *zoom: 1; }
+  *zoom: 1;
+  font-family: "Source Serif Pro", serif; }
   section[role=presentation]:before, section[role=presentation]:after {
     content: "";
     display: table; }
@@ -987,9 +982,8 @@ section[role=presentation] {
         width: 49.24242%;
         margin: 0 0.37879%; } }
     section[role=presentation] .headline p {
-      font-family: "NoeDisplayMedium";
       font-size: 1.2rem;
-      color: #bf616a;
+      color: #00ab6a;
       line-height: 1.6; }
       @media (min-width: 48em) {
         section[role=presentation] .headline p {
@@ -1000,19 +994,21 @@ section[role=presentation] {
         section[role=presentation] .headline:before {
           content: '';
           display: block;
-          background-color: #bf616a;
+          background-color: #00ab6a;
           height: 3px;
           width: 30px;
           position: absolute;
           top: 1rem;
           left: -3rem; } }
-  @media (min-width: 48em) {
-    section[role=presentation] .introduction {
-      display: inline;
-      float: left;
-      width: 40.90909%;
-      margin: 0 0.37879%;
-      margin-left: 8.71212%; } }
+  section[role=presentation] .introduction {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    @media (min-width: 48em) {
+      section[role=presentation] .introduction {
+        display: inline;
+        float: left;
+        width: 40.90909%;
+        margin: 0 0.37879%;
+        margin-left: 8.71212%; } }
 
 footer[role=presentation] {
   margin-top: 3vh; }
@@ -1032,7 +1028,7 @@ ul.social li {
     color: #cccccc;
     fill: #cccccc; }
     ul.social li a:hover {
-      background: #bf616a;
+      background: #00ab6a;
       border-radius: 100%;
       color: #f9f9f9;
       fill: #f9f9f9;
