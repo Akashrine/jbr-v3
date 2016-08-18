@@ -247,6 +247,8 @@ pre code {
     background-color: transparent;
 }
 
+/*----------  Classes  ----------*/
+
 .emphasize {
     font-style: italic;
 }
@@ -267,6 +269,26 @@ pre code {
     top: -0.5rem;
 }
 
+/*----------  table  ----------*/
+
+table {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid color(brand);
+    text-align: left;
+}
+
+th {
+    font-weight: 700;
+}
+
+th, td {
+    padding: 15px;
+}
 @media (min-width: 40rem) {
     h1 {
         font-size: 3rem;
@@ -296,7 +318,6 @@ html {
 
 body {
     width: 100%;
-
     @include clearfix;
 }
 

@@ -1,12 +1,22 @@
 /*================================
 =            Homepage            =
 ================================*/
+
+.diag {
+    position: absolute;
+    background-color: #DDD;
+    background-image: -webkit-linear-gradient(75deg, #FFF 40%, #F9F9FC 40%);
+    min-height: 800px;
+    width: 100%;
+}
+
 header[role=header] {
     h2.bording {
         margin: 0.8rem 0;
-        width:80%;
+        width: 80%;
     }
-    .min{
+
+    .min {
         font-size: 0.8rem;
         letter-spacing: 1px;
         font-family: $sans-serif;
@@ -15,7 +25,9 @@ header[role=header] {
 
 section[role=presentation] {
     @include clearfix;
+
     font-family: $serif;
+
     .headline {
         @include breakpoint(large) {
             @include column(6);
@@ -29,6 +41,7 @@ section[role=presentation] {
             @include breakpoint(large) {
                 font-size: 1.4rem;
             }
+
 
             font-size: 1.2rem;
             color: color(brand);
@@ -53,6 +66,7 @@ section[role=presentation] {
 
     .introduction {
         font-family: $sans-serif;
+
         @include breakpoint(large) {
             @include column(5);
 
@@ -68,24 +82,25 @@ footer[role=presentation] {
 /*Social*/
 ul.social li {
     list-style: none;
-    display: inline-block;
+    display: block;
+    margin-bottom: -.25rem;
 
     a, svg {
-        display: block;
+        display: inline-block;
     }
 
     a {
         position: relative;
 
         // IE8
-        height: 16px;
+        height: 14px;
 
         // IE8
-        height: 1.6rem;
-        width: 16px;
+        height: 1.4rem;
+        width: 14px;
 
         // IE8
-        width: 1.6rem;
+        width: 1.4rem;
         color: color(grey);
         fill: color(grey);
 
@@ -104,15 +119,34 @@ ul.social li {
     }
 
     em {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-top: -.75em;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        display: none;
+
+        @include breakpoint(large) {
+            display: inline;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-top: -.7em;
+            position: absolute;
+            text-align: left;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding-left: 2rem;
+            font-style: normal;
+            font-family: $sans-serif;
+            text-transform: uppercase;
+
+            &:hover {
+                color: color(brand);
+            }
+        }
+        span{
+            font-family: $serif;
+            color:color(brand);
+            font-style: italic;
+            text-transform: lowercase;
+        }
     }
 }
 
