@@ -8,6 +8,7 @@
     background-image: -webkit-linear-gradient(75deg, #FFF 40%, #F9F9FC 40%);
     min-height: 800px;
     width: 100%;
+    z-index: -1;
 }
 
 header[role=header] {
@@ -146,6 +147,18 @@ ul.social li {
             color:color(brand);
             font-style: italic;
             text-transform: lowercase;
+        }
+    }
+}
+
+/*----------  Dribbble  ----------*/
+.shots{
+    list-style:none;
+    li{
+        width: 25%;
+        display:inline-block;
+        img{
+            width: 100%;
         }
     }
 }

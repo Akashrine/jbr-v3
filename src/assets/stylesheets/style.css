@@ -579,6 +579,12 @@ pre code {
       font-size: 1.15rem;
       color: #888; } }
 
+.sans {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.serif {
+  font-family: "Source Serif Pro", serif; }
+
 /*----------  table  ----------*/
 table {
   width: 100%;
@@ -978,7 +984,8 @@ figure {
   background-color: #DDD;
   background-image: -webkit-linear-gradient(75deg, #FFF 40%, #F9F9FC 40%);
   min-height: 800px;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 header[role=header] h2.bording {
   margin: 0.8rem 0;
@@ -1088,6 +1095,15 @@ ul.social li {
       color: #4eaff6;
       font-style: italic;
       text-transform: lowercase; }
+
+/*----------  Dribbble  ----------*/
+.shots {
+  list-style: none; }
+  .shots li {
+    width: 25%;
+    display: inline-block; }
+    .shots li img {
+      width: 100%; }
 
 /*=====  End of Homepage  ======*/
 /*============================
