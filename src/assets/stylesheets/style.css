@@ -585,6 +585,13 @@ pre code {
 .serif {
   font-family: "Source Serif Pro", serif; }
 
+.center {
+  text-align: center;
+  margin: inherit auto; }
+
+.neg {
+  margin-top: -.75rem; }
+
 /*----------  table  ----------*/
 table {
   width: 100%;
@@ -647,6 +654,24 @@ body {
       max-width: 50rem;
       margin: 0 auto;
       padding: 1rem 2rem; } }
+
+.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.grid > * {
+  -webkit-flex-basis: 10em;
+      -ms-flex-preferred-size: 10em;
+          flex-basis: 10em;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 /*=====  End of Base  ======*/
 .hll {
@@ -946,6 +971,27 @@ body {
 /*==============================
 =            Footer            =
 ==============================*/
+.site-footer {
+  position: relative;
+  background-color: #f5f5f5;
+  padding-top: 1.5rem; }
+  .site-footer .social-footer {
+    list-style: none;
+    margin-top: 1.5rem; }
+    .site-footer .social-footer li {
+      display: inline-block; }
+      .site-footer .social-footer li a {
+        color: #34495e; }
+  .site-footer .bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-image: -webkit-linear-gradient(left, #4eaff6 0%, #34495e 100%);
+    background-image: linear-gradient(to right, #4eaff6 0%, #34495e 100%);
+    margin: 0;
+    padding: 0; }
+
 /*=====  End of Footer  ======*/
 /*----------  Components  ----------*/
 /*==========================================
@@ -1097,13 +1143,18 @@ ul.social li {
       text-transform: lowercase; }
 
 /*----------  Dribbble  ----------*/
-.shots {
-  list-style: none; }
-  .shots li {
+.insta {
+  list-style: none;
+  margin: 0; }
+  .insta li {
     width: 25%;
-    display: inline-block; }
-    .shots li img {
-      width: 100%; }
+    display: inline-block;
+    margin: 0; }
+    .insta li img {
+      width: 100%;
+      max-width: 100%;
+      vertical-align: middle;
+      margin: 0; }
 
 /*=====  End of Homepage  ======*/
 /*============================

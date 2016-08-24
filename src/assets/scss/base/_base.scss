@@ -276,6 +276,15 @@ pre code {
     font-family: $serif;
 }
 
+.center{
+    text-align: center;
+    margin:inherit auto;
+}
+
+.neg{
+    margin-top: -.75rem;
+}
+
 /*----------  table  ----------*/
 
 table {
@@ -348,5 +357,16 @@ body {
         padding: 1rem 2rem;
     }
 }
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.grid > * {
+  flex-basis: 10em;
+  flex-grow: 1;
+}
+
 
 /*=====  End of Base  ======*/

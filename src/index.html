@@ -35,16 +35,21 @@ title: Home
 </article>
 <hr />
 </section>
+<section class="container">
+    <header>
+        <h3>Last entries</h3>
+        <h4 class="sans">Thoughts about management, design, front-end and products</h4>
+    </header>
+    {% for post in site.posts limit:6 %}
+        <article class="post-listing__single">
+            <h5>{{ post.date | date:'%B %-d, %Y' }}</h5>
+            <p class="h2"><a href="{{ post.url }}">{{ post.title }}</a></p>
+        </article>
+    {% endfor %}
+    <aside><p><a href="/blog">Read the blog</a></p></h5></aside>
+    <hr />
+</section>
 
 <section>
-    <header class="container">
-        <h3>Some works</h3>
-        <h4 class="sans">Essentially personal stuff</h4>
-    </header>
-    <ul class="shots"></ul>
     <ul class="insta"></ul>
-    <!-- Lightbox -->
-    <div class="lightbox" >
-      <figure></figure>
-    </div>
 </section>
