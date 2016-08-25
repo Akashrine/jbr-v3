@@ -541,7 +541,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #4eaff6;
-  background-color: #f9f9f9;
+  background-color: #fcfcfc;
   border-radius: 3px; }
 
 pre {
@@ -554,7 +554,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
-  background-color: #f9f9f9; }
+  background-color: #fcfcfc; }
 
 pre code {
   padding: 0;
@@ -657,19 +657,15 @@ body {
 
 .grid {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
 
 .grid > * {
-  -webkit-flex-basis: 10em;
-      -ms-flex-preferred-size: 10em;
-          flex-basis: 10em;
+  -ms-flex-preferred-size: 10em;
+      flex-basis: 10em;
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
@@ -975,13 +971,6 @@ body {
   position: relative;
   background-color: #f5f5f5;
   padding-top: 1.5rem; }
-  .site-footer .social-footer {
-    list-style: none;
-    margin-top: 1.5rem; }
-    .site-footer .social-footer li {
-      display: inline-block; }
-      .site-footer .social-footer li a {
-        color: #34495e; }
   .site-footer .bottom-gradient {
     position: absolute;
     bottom: 0;
@@ -991,6 +980,31 @@ body {
     background-image: linear-gradient(to right, #4eaff6 0%, #34495e 100%);
     margin: 0;
     padding: 0; }
+
+.social-footer {
+  margin-top: 1.5rem; }
+  .social-footer li {
+    list-style: none;
+    display: inline;
+    margin: 0 .5rem; }
+    .social-footer li a, .social-footer li svg {
+      display: inline-block; }
+    .social-footer li a {
+      position: relative;
+      height: 20px;
+      height: 2rem;
+      width: 20px;
+      width: 2rem;
+      fill: #cccccc; }
+      .social-footer li a:hover {
+        background: #4eaff6;
+        border-radius: 100%;
+        fill: #fcfcfc;
+        -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
+                transition: background-color .5s, transform .5s ease-out; }
+    .social-footer li svg {
+      height: 100%;
+      width: 100%; }
 
 /*=====  End of Footer  ======*/
 /*----------  Components  ----------*/
@@ -1003,7 +1017,7 @@ img {
 figure {
   padding: 1em 1rem 0rem;
   margin-bottom: 1rem;
-  background: #f9f9f9; }
+  background: #fcfcfc; }
   figure figcaption {
     font-size: 1.125rem; }
     figure figcaption:before {
@@ -1092,55 +1106,29 @@ footer[role=presentation] {
   margin-top: 3vh; }
 
 /*Social*/
-ul.social li {
-  list-style: none;
-  display: block;
-  margin-bottom: -.25rem; }
-  ul.social li a, ul.social li svg {
-    display: inline-block; }
-  ul.social li a {
-    position: relative;
-    height: 14px;
-    height: 1.4rem;
-    width: 14px;
-    width: 1.4rem;
-    color: #cccccc;
-    fill: #cccccc; }
-    ul.social li a:hover {
-      background: #4eaff6;
-      border-radius: 100%;
-      color: #f9f9f9;
-      fill: #f9f9f9;
-      -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
-              transition: background-color .5s, transform .5s ease-out; }
-  ul.social li svg {
-    height: 100%;
-    width: 100%; }
-  ul.social li em {
-    display: none; }
-    @media (min-width: 48em) {
-      ul.social li em {
-        display: inline;
-        font-size: 0.9rem;
-        line-height: 1.5;
-        margin-top: -.7em;
-        position: absolute;
-        text-align: left;
-        top: 50%;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding-left: 2rem;
-        font-style: normal;
-        font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-transform: uppercase; }
-        ul.social li em:hover {
-          color: #4eaff6; } }
-    ul.social li em span {
-      font-family: "Source Serif Pro", serif;
-      color: #4eaff6;
-      font-style: italic;
-      text-transform: lowercase; }
+.social {
+  list-style: none; }
+  .social li {
+    padding-left: 2rem;
+    position: relative; }
+    .social li a {
+      color: #cccccc;
+      text-decoration: none;
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.9rem; }
+    .social li:before {
+      content: '';
+      display: block;
+      background-color: #cccccc;
+      height: 3px;
+      width: 1.5rem;
+      position: absolute;
+      top: 0.6rem;
+      left: 0rem; }
+    .social li:hover:before {
+      background-color: #4eaff6; }
 
 /*----------  Dribbble  ----------*/
 .insta {

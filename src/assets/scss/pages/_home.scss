@@ -81,74 +81,37 @@ footer[role=presentation] {
 }
 
 /*Social*/
-ul.social li {
+
+.social{
     list-style: none;
-    display: block;
-    margin-bottom: -.25rem;
-
-    a, svg {
-        display: inline-block;
-    }
-
-    a {
+    li{
+        padding-left: 2rem;
         position: relative;
-
-        // IE8
-        height: 14px;
-
-        // IE8
-        height: 1.4rem;
-        width: 14px;
-
-        // IE8
-        width: 1.4rem;
-        color: color(grey);
-        fill: color(grey);
-
-        &:hover {
-            background: color(brand);
-            border-radius: 100%;
-            color: color(white);
-            fill: color(white);
-            transition: background-color .5s, transform .5s ease-out;
-        }
-    }
-
-    svg {
-        height: 100%;
-        width: 100%;
-    }
-
-    em {
-        display: none;
-
-        @include breakpoint(large) {
-            display: inline;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-top: -.7em;
-            position: absolute;
-            text-align: left;
-            top: 50%;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            padding-left: 2rem;
-            font-style: normal;
+        a{
+            color:color(grey);
+            text-decoration: none;
             font-family: $sans-serif;
             text-transform: uppercase;
-
-            &:hover {
-                color: color(brand);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+            &:before {
+                content: '';
+                display: block;
+                background-color: color(grey);
+                height: 3px;
+                width: 1.5rem;
+                position: absolute;
+                top: 0.6rem;
+                left: 0rem;
             }
-        }
-        span{
-            font-family: $serif;
-            color:color(brand);
-            font-style: italic;
-            text-transform: lowercase;
-        }
+            &:hover {
+                &:before{
+                    background-color:color(brand);
+                }
+            }
     }
+
 }
 
 /*----------  Dribbble  ----------*/
