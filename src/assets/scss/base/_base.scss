@@ -247,43 +247,6 @@ pre code {
     background-color: transparent;
 }
 
-/*----------  Classes  ----------*/
-
-.emphasize {
-    font-style: italic;
-}
-
-.subhead {
-    @include breakpoint(large) {
-        font-size: 1.15rem;
-        color: color(note-text);
-    }
-
-
-    position: relative;
-    text-transform: lowercase;
-    font-variant: small-caps;
-    font-weight: normal;
-    font-size: 0.8rem;
-    color: color(note-text);
-    top: -0.5rem;
-}
-
-.sans{
-    font-family: $sans-serif;
-}
-.serif{
-    font-family: $serif;
-}
-
-.center{
-    text-align: center;
-    margin:inherit auto;
-}
-
-.neg{
-    margin-top: -.75rem;
-}
 
 /*----------  table  ----------*/
 
