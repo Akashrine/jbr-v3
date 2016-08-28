@@ -12,44 +12,43 @@ title: Home
         </header>
         <section role="presentation">
             <div class="headline"><p>I'm a 31-year-old ex front-end developer based in Paris. I'm now focused on product management and team management. Currently working for The Other Store.</p>
-            <footer role="presentation">
-                <ul class="social">
-                    <li><a class="social twitter" href="{{site.social.twitter}}">Twitter</a></li>
-                    <li><a class="social github" href="{{site.social.github}}">GitHub</a></li>
-                    <li><a class="social lastfm" href="{{site.social.lastfm}}">Last.fm</a></li>
-                    <li><a href="{{site.social.dribbble}}" class="social dribbble" title="Dribbble">Dribbble</a></li>
-                </ul>
-            </footer>
-        </div>
-        <div class="introduction">
-            <p>Coming from UI and Webdesign, I quickly add the front end development in my pocket. Driven by the business, I eventually think and concept products. <br />I love to learn new stuff while listening to <a href="{{site.social.lastfm}}">good music</a>. Sometimes I speak and try to teach my passion to students.  <br>
-            <a href="/about.html" class="emphasize">More about me</a></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </section>
-</article>
-<hr />
-</section>
-<section class="container">
-    <header>
-        <h3>Last entries</h3>
-        <h4 class="sans">Thoughts about management, design, front-end and products</h4>
-    </header>
-    {% for post in site.posts limit:6 %}
-        <article class="post-listing__single">
-            <h5>{{ post.date | date:'%B %-d, %Y' }}</h5>
-            <p class="h2"><a href="{{ post.url }}">{{ post.title }}</a></p>
-        </article>
-    {% endfor %}
-    <aside><p><a href="/blog">Read the blog</a></p></h5></aside>
+                <footer role="presentation">
+                    <ul class="social">
+                        <li><a class="social twitter" href="{{site.social.twitter}}">Twitter</a></li>
+                        <li><a class="social github" href="{{site.social.github}}">GitHub</a></li>
+                        <li><a class="social lastfm" href="{{site.social.lastfm}}">Last.fm</a></li>
+                        <li><a href="{{site.social.dribbble}}" class="social dribbble" title="Dribbble">Dribbble</a></li>
+                    </ul>
+                </footer>
+            </div>
+            <div class="introduction">
+                <p>Coming from UI and Webdesign, I quickly add the front end development in my pocket. Driven by the business, I eventually think and concept products. <br />I love to learn new stuff while listening to <a href="{{site.social.lastfm}}">good music</a>. Sometimes I speak and try to teach my passion to students.  <br>
+                <a href="/about.html" class="emphasize">More about me</a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+    </article>
     <hr />
+    <article>
+        <header>
+            <h3>Last entries</h3>
+            <h4 class="sans">Thoughts about management, design, front-end and products</h4>
+        </header>
+        {% for post in site.posts limit:6 %}
+            <article class="post-listing__single">
+                <h5>{{ post.date | date:'%B %-d, %Y' }}</h5>
+                <p class="h2"><a href="{{ post.url }}">{{ post.title }}</a></p>
+            </article>
+        {% endfor %}
+        <aside><p><a href="/blog">Read the blog</a></p></h5></aside>
+        <hr />
+    </article>
 </section>
-
 <section>
     <ul class="insta"></ul>
 </section>

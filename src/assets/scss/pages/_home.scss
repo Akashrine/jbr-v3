@@ -83,14 +83,14 @@ footer[role=presentation] {
             text-decoration: none;
             font-family: $sans-serif;
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight: normal;
             font-size: 0.9rem;
         }
             &:before {
                 content: '';
                 display: block;
                 background-color: color(grey);
-                height: 3px;
+                height: 2px;
                 width: 1.5rem;
                 position: absolute;
                 top: 0.6rem;

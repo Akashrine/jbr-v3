@@ -4,7 +4,7 @@
 .diag {
     position: absolute;
     background-color: #DDD;
-    background-image: -webkit-linear-gradient(75deg, #FFF 40%, lighten(color(brand), 48%) 40%);
+    background-image: -webkit-linear-gradient(75deg, #FFF 40%, lighten(color(brand), 52%) 40%);
     min-height: 800px;
     width: 100%;
     z-index: -1;
@@ -48,7 +48,7 @@
 .header__logo {
     @include breakpoint(large) {
         font-size: 0.75rem;
-        font-weight: 800;
+        font-weight: 500;
     }
 
 
