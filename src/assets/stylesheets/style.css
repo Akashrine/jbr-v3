@@ -32,9 +32,9 @@
  * Based on normalize and normalize-opentype
  *
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900,300);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i);
 @import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Merryweather:400,400i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i);
 article,
 aside,
 details,
@@ -362,7 +362,7 @@ caption {
 =            Base            =
 ============================*/
 html {
-  font: 100%/1.4 "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 100%/1.4 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
@@ -377,7 +377,7 @@ html {
 
 body {
   color: #555;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   display: -webkit-box;
@@ -401,7 +401,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   color: #333;
   letter-spacing: -.025rem;
-  font-family: "Merryweather", serif; }
+  font-family: "Noto Serif", serif; }
 
 h1 {
   font-size: 2.618rem;
@@ -531,7 +531,7 @@ blockquote.awesome {
   quotes: "“" "”" "‘" "’"; }
   blockquote.awesome:after {
     color: #ccc;
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     content: open-quote;
     font-size: 80px;
     position: absolute;
@@ -675,10 +675,10 @@ body {
       color: #888; } }
 
 .sans {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .serif {
-  font-family: "Merryweather", serif; }
+  font-family: "Noto Serif", serif; }
 
 .center {
   text-align: center;
@@ -913,7 +913,7 @@ body {
         width: 32.57576%;
         margin: 0 0.37879%; } }
   .header[role=banner] nav {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline;
     float: left;
     width: 99.24242%;
@@ -955,7 +955,7 @@ body {
       color: #888;
       letter-spacing: -0.01em;
       font-size: 0.8rem;
-      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       -webkit-transition: color .6s ease-in;
       transition: color .6s ease-in; }
       @media (min-width: 48em) {
@@ -1082,11 +1082,11 @@ header[role=header] h2.bording {
 header[role=header] .min {
   font-size: 0.8rem;
   letter-spacing: 1px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 section[role=presentation] {
   *zoom: 1;
-  font-family: "Merryweather", serif; }
+  font-family: "Noto Serif", serif; }
   section[role=presentation]:before, section[role=presentation]:after {
     content: "";
     display: table; }
@@ -1121,7 +1121,7 @@ section[role=presentation] {
           top: 1rem;
           left: -3rem; } }
   section[role=presentation] .introduction {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     @media (min-width: 48em) {
       section[role=presentation] .introduction {
         display: inline;
@@ -1142,7 +1142,7 @@ footer[role=presentation] {
     .social li a {
       color: #cccccc;
       text-decoration: none;
-      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-transform: uppercase;
       font-weight: normal;
       font-size: 0.9rem; }
