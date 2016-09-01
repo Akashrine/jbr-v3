@@ -4,16 +4,17 @@
 .diag {
     position: absolute;
     background-color: #DDD;
-    background-image: -webkit-linear-gradient(75deg, #FFF 40%, lighten(color(brand), 52%) 40%);
+    background-image: -webkit-linear-gradient(75deg, #FFF 40%, lighten(color(brand-annex), 68%) 40%);
     min-height: 800px;
     width: 100%;
     z-index: -1;
 }
 
 .top-gradient {
-    @include gradient();
+    @include gradient;
+
     position: absolute;
-    top:0;
+    top: 0;
 }
 
 .header[role=banner] {
@@ -117,27 +118,30 @@
         position: relative;
         top: -1rem;
 
-        &:hover, &.active, &.focus {
+        &:before {
+            content: '';
+            display: block;
+            background-color: color(brand);
+            height: 3px;
+            width: 0px;
+            position: absolute;
+            top: 2.5rem;
+            left: 0rem;
+            -webkit-transition: all 0.2s linear 0s;
+            transition: all 0.2s linear 0s;
+        }
+
+         &.active, &.focus {
             color: color(brand);
             position: relative;
-
-            &:before {
-                content: '';
-                display: block;
-                background-color: color(brand);
-                height: 3px;
-                width: 15px;
-                position: absolute;
-                top: 2.5rem;
-                left: 0rem;
-            }
         }
 
         &:hover {
             color: color(dark);
 
             &:before {
-                background-color: color(dark);
+                background-color: color(brand);
+                width: 100%;
             }
         }
 

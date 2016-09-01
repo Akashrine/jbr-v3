@@ -5,10 +5,10 @@
 /*----------  Font Face  ----------*/
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i);
 @import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700);
-@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Merryweather:400,400i,700,700i);
 
 /*----------  Color  ----------*/
-$colors: (brand: #2772b7, brand-annex: #D32F2F, dark: #222, grey: #cccccc, white: #fdfdfd, body-type: #555, head-type: #333, note-text: #888);
+$colors: (brand: #006992, brand-annex: #27476E, inverted-brand: #06D6A0, dark: #222, grey: #cccccc, white: #fdfdfd, body-type: #555, head-type: #333, note-text: #888);
 
 /**
 *
@@ -26,7 +26,7 @@ $colors: (brand: #2772b7, brand-annex: #D32F2F, dark: #222, grey: #cccccc, white
 /*----------  Typo  Vars ----------*/
 
 $sans-serif:'Noto Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$serif:'Noto Serif', serif;
+$serif:'Merryweather', serif;
 
 
 /*----------  Grid  ----------*/
