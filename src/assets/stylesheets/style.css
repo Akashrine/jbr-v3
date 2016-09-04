@@ -478,7 +478,7 @@ p a {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  color: #006992;
+  color: #007EA7;
   opacity: 1; }
 
 p a:after {
@@ -487,14 +487,14 @@ p a:after {
   left: 0;
   width: 100%;
   height: .1em;
-  background: #006992;
+  background: #007EA7;
   content: '';
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
   z-index: -1; }
 
 p a:hover:after {
-  background: #06D6A0;
+  background: #9AD1D4;
   height: 0.5em;
   top: 60%;
   -webkit-transition: all .3s ease-in-out;
@@ -553,7 +553,7 @@ pre {
 code {
   padding: .25em .5em;
   font-size: 85%;
-  color: #006992;
+  color: #007EA7;
   background-color: #fdfdfd;
   border-radius: 3px; }
 
@@ -582,7 +582,7 @@ table {
   border-collapse: collapse; }
 
 table, td, th {
-  border: 1px solid #006992;
+  border: 1px solid #007EA7;
   text-align: left; }
 
 th {
@@ -658,7 +658,7 @@ body {
   font-style: italic; }
 
 .brand {
-  color: #006992; }
+  color: #007EA7; }
 
 .subhead {
   position: relative;
@@ -883,7 +883,7 @@ body {
 .diag {
   position: absolute;
   background-color: #DDD;
-  background-image: -webkit-linear-gradient(75deg, #FFF 40%, #f5f8fb 40%);
+  background-image: -webkit-linear-gradient(75deg, #FFF 40%, white 40%);
   min-height: 800px;
   width: 100%;
   z-index: -1; }
@@ -891,8 +891,8 @@ body {
 .top-gradient {
   width: 100%;
   height: 0.2rem;
-  background-image: -webkit-linear-gradient(left, #006992 0%, #27476E 100%);
-  background-image: linear-gradient(to right, #006992 0%, #27476E 100%);
+  background-image: -webkit-linear-gradient(left, #007EA7 0%, #9AD1D4 100%);
+  background-image: linear-gradient(to right, #007EA7 0%, #9AD1D4 100%);
   margin: 0;
   padding: 0;
   position: absolute;
@@ -946,9 +946,9 @@ body {
     text-decoration: none;
     color: #222; }
     .header__logo a:hover {
-      color: #006992; }
+      color: #007EA7; }
       .header__logo a:hover span {
-        color: #27476E; }
+        color: #9AD1D4; }
     .header__logo a span {
       font-weight: 400;
       color: #888;
@@ -982,7 +982,7 @@ body {
     .main-nav a:before {
       content: '';
       display: block;
-      background-color: #006992;
+      background-color: #007EA7;
       height: 3px;
       width: 0px;
       position: absolute;
@@ -991,12 +991,12 @@ body {
       -webkit-transition: all 0.2s linear 0s;
       transition: all 0.2s linear 0s; }
     .main-nav a.active, .main-nav a.focus {
-      color: #006992;
+      color: #007EA7;
       position: relative; }
     .main-nav a:hover {
       color: #222; }
       .main-nav a:hover:before {
-        background-color: #006992;
+        background-color: #007EA7;
         width: 100%; }
     .main-nav a:last-child {
       margin-right: 0; }
@@ -1007,13 +1007,13 @@ body {
 ==============================*/
 .site-footer {
   position: relative;
-  background-color: #eefaff;
+  background-color: white;
   padding-top: 1.5rem; }
   .site-footer .bottom-gradient {
     width: 100%;
     height: 0.2rem;
-    background-image: -webkit-linear-gradient(left, #006992 0%, #27476E 100%);
-    background-image: linear-gradient(to right, #006992 0%, #27476E 100%);
+    background-image: -webkit-linear-gradient(left, #007EA7 0%, #9AD1D4 100%);
+    background-image: linear-gradient(to right, #007EA7 0%, #9AD1D4 100%);
     margin: 0;
     padding: 0;
     position: absolute;
@@ -1035,7 +1035,7 @@ body {
       width: 2rem;
       fill: #cccccc; }
       .social-footer li a:hover {
-        background: #006992;
+        background: #007EA7;
         border-radius: 100%;
         fill: #fdfdfd;
         -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
@@ -1105,7 +1105,7 @@ section[role=presentation] {
         margin: 0 0.37879%; } }
     section[role=presentation] .headline p {
       font-size: 1.2rem;
-      color: #006992;
+      color: #007EA7;
       line-height: 1.6; }
       @media (min-width: 48em) {
         section[role=presentation] .headline p {
@@ -1116,7 +1116,7 @@ section[role=presentation] {
         section[role=presentation] .headline:before {
           content: '';
           display: block;
-          background-color: #006992;
+          background-color: #007EA7;
           height: 3px;
           width: 30px;
           position: absolute;
@@ -1158,7 +1158,7 @@ footer[role=presentation] {
       top: 0.6rem;
       left: 0rem; }
     .social li:hover:before {
-      background-color: #06D6A0; }
+      background-color: #FFBA08; }
 
 /*----------  Dribbble  ----------*/
 .insta {
