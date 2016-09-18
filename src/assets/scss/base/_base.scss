@@ -23,16 +23,19 @@ html {
 
 body {
     color: color(body-type);
-    font-family: $sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
+    font-family: $serif;
+
+    @include vendor(text-size-adjust, 100%);
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    @include animation(fadeInDown, 300ms, 400ms, ease, backwards);
 }
 
-.site-content{
-  flex: 1;
+.site-content {
+    flex: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     color: color(head-type);
     letter-spacing: -.025rem;
-    font-family: $serif;
+    font-family: $serif-bold;
 }
 
 h1 {
@@ -75,7 +78,17 @@ h4, .subhead {
     font-weight: normal;
     font-size: 1.15rem;
     color: color(note-text);
-    top: -0.5rem;
+    top: -0.75rem;
+}
+
+::selection {
+    color: color(inverted-brand);
+    background-color: color(white);
+}
+
+::-moz-selection {
+    color: color(inverted-brand);
+    background-color: color(white);
 }
 
 p {
@@ -138,31 +151,32 @@ ol + h3 {
 }
 
 p a {
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  color:color(brand);
-  opacity: 1;
-  &:hover {
-  }
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: color(brand);
+    opacity: 1;
+
+    &:hover {}
 }
+
 p a:after {
-  position: absolute;
-  top: 98%;
-  left: 0;
-  width: 100%;
-  height: .1em;
-  background: color(brand);
-  content: '';
-  transition: all .3s ease-in-out;
-  z-index:-1;
+    position: absolute;
+    top: 98%;
+    left: 0;
+    width: 100%;
+    height: .1em;
+    background: color(brand);
+    content: '';
+    transition: all .3s ease-in-out;
+    z-index: -1;
 }
 
 p a:hover:after {
-  background: color(brand-annex);
-   height: 0.5em;
-   top: 60%;
-  transition: all .3s ease-in-out;
+    background: color(inverted-brand);
+    height: 0.5em;
+    top: 50%;
+    transition: all .3s ease-in-out;
 }
 
 hr {
@@ -198,6 +212,7 @@ blockquote.awesome {
     border-left: 0;
     position: relative;
     quotes: "“" "”" "‘" "’";
+
     &:after {
         color: #ccc;
         font-family: $sans-serif;
@@ -254,7 +269,6 @@ pre code {
     background-color: transparent;
 }
 
-
 /*----------  table  ----------*/
 
 table {
@@ -275,6 +289,7 @@ th {
 th, td {
     padding: 15px;
 }
+
 @media (min-width: 40rem) {
     h1 {
         font-size: 3rem;
@@ -304,6 +319,7 @@ html {
 
 body {
     width: 100%;
+
     @include clearfix;
 }
 
@@ -329,14 +345,13 @@ body {
 }
 
 .grid {
-  display: flex;
-  flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .grid > * {
-  flex-basis: 10em;
-  flex-grow: 1;
+    flex-basis: 10em;
+    flex-grow: 1;
 }
-
 
 /*=====  End of Base  ======*/

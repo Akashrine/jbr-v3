@@ -72,6 +72,41 @@
             transition: $args;
 }
 
+
+/*  Vendor Prefixing
+/*  @include vendor(background-size, cover);
+/*==================================================*/
+
+@mixin vendor($property, $value...){
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+         -o-#{$property}: $value;
+            #{$property}: $value;
+}
+
+/*  Animation
+/*  @include animation(fadeInUp, 500ms, 200ms, ease, forward);
+/*==================================================*/
+
+@mixin animation($name, $duration, $delay, $timing, $direction){
+    @include vendor(animation-name, $name);
+    @include vendor(animation-duration, $duration);
+    @include vendor(animation-delay, $delay);
+    @include vendor(animation-iteration-count, $timing);
+    @include vendor(animation-fill-mode, $direction);
+}
+
+/*  Opacity
+/*  @include opacity(100);
+/*==================================================*/
+
+@mixin opacity($property){
+    zoom: 1;
+    filter: alpha(opacity=$property);
+    opacity: $property / 100;
+}
+
 @mixin gradient(){
         width: 100%;
         height: 0.2rem;
@@ -121,3 +156,77 @@
 
 
 /*=====  End of Layout and Grid (kind of)  ======*/
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+/* --------------------------------------------------------
+    fadeindown
+-------------------------------------------------------- */
+
+@-webkit-keyframes fadeInDown {
+    from {
+        @include opacity(0);
+    }
+    to {
+        @include opacity(100);
+    }
+}
+
+@-moz-keyframes fadeInDown {
+    from {
+        @include opacity(0);
+    }
+    to {
+        @include opacity(100);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        @include opacity(0);
+    }
+    to {
+        @include opacity(100);
+    }
+}

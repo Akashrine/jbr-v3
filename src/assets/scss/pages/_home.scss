@@ -57,7 +57,7 @@ section[role=presentation] {
     }
 
     .introduction {
-        font-family: $sans-serif;
+        font-family: $serif;
 
         @include breakpoint(large) {
             @include column(5);
@@ -113,6 +113,9 @@ footer[role=presentation] {
         width:50%;
         display: inline-block;
         margin: 0;
+        a{
+            font-size: 12px;
+        }
         @include breakpoint(large){
             width: 25%;
         }
