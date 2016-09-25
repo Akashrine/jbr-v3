@@ -1086,30 +1086,35 @@ body {
     position: absolute;
     bottom: 0; }
 
-.social-footer {
-  margin-top: 1.5rem; }
-  .social-footer li {
-    list-style: none;
-    display: inline;
-    margin: 0 .5rem; }
-    .social-footer li a, .social-footer li svg {
-      display: inline-block; }
-    .social-footer li a {
-      position: relative;
-      height: 20px;
-      height: 2rem;
-      width: 20px;
-      width: 2rem;
-      fill: #cccccc; }
-      .social-footer li a:hover {
-        background: #007EA7;
-        border-radius: 100%;
-        fill: #fdfdfd;
-        -webkit-transition: background-color .5s, -webkit-transform .5s ease-out;
-                transition: background-color .5s, transform .5s ease-out; }
-    .social-footer li svg {
-      height: 100%;
-      width: 100%; }
+footer .social-footer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 60px; }
+
+footer li {
+  display: inline;
+  padding-left: 15px; }
+  footer li:first-child {
+    padding-left: 0px; }
+
+footer a path {
+  fill: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+  border-bottom: transparent 1px solid !important; }
+
+footer a:hover {
+  border-bottom: transparent 1px solid !important; }
+  footer a:hover path {
+    fill: #007EA7;
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+    border-bottom: transparent 1px solid !important; }
+
+footer a:active {
+  border-bottom: transparent 1px solid !important; }
 
 /*=====  End of Footer  ======*/
 /*----------  Components  ----------*/
