@@ -644,19 +644,23 @@ pre code {
 
 /*----------  table  ----------*/
 table {
+  display: table;
   width: 100%;
-  margin: 1rem 0;
-  border-collapse: collapse; }
-
-table, td, th {
-  border: 1px solid #007EA7;
-  text-align: left; }
-
-th {
-  font-weight: 700; }
-
-th, td {
-  padding: 15px; }
+  border-width: 0px;
+  border-collapse: collapse;
+  font-weight: 300;
+  color: #888;
+  margin-top: 0px;
+  margin-bottom: 20px; }
+  table thead tr td {
+    font-weight: normal;
+    border-bottom: 2px solid #007EA7;
+    background-color: #f6f8fa; }
+  table tr td {
+    border-bottom: 1px solid #9AD1D4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; }
 
 @media (min-width: 40rem) {
   h1 {
@@ -1086,34 +1090,34 @@ body {
     position: absolute;
     bottom: 0; }
 
-footer .social-footer {
+.site-footer .social-footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
   margin-top: 60px; }
 
-footer li {
+.site-footer li {
   display: inline;
   padding-left: 15px; }
-  footer li:first-child {
+  .site-footer li:first-child {
     padding-left: 0px; }
 
-footer a path {
+.site-footer a path {
   fill: rgba(0, 0, 0, 0.2);
   -webkit-transition: all .3s ease;
           transition: all .3s ease;
   border-bottom: transparent 1px solid !important; }
 
-footer a:hover {
+.site-footer a:hover {
   border-bottom: transparent 1px solid !important; }
-  footer a:hover path {
+  .site-footer a:hover path {
     fill: #007EA7;
     -webkit-transition: all .3s ease;
             transition: all .3s ease;
     border-bottom: transparent 1px solid !important; }
 
-footer a:active {
+.site-footer a:active {
   border-bottom: transparent 1px solid !important; }
 
 /*=====  End of Footer  ======*/

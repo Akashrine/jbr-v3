@@ -271,23 +271,21 @@ pre code {
 
 /*----------  table  ----------*/
 
-table {
-    width: 100%;
-    margin: 1rem 0;
-    border-collapse: collapse;
-}
+//Table style
+table
+{
+    //General table style
+    display: table; width: 100%; border: { width: 0px; collapse: collapse; } font-weight: 300;
+    color: color(note-text);
 
-table, td, th {
-    border: 1px solid color(brand);
-    text-align: left;
-}
+    //Table margin
+    margin: { top: 0px; bottom: 20px; }
 
-th {
-    font-weight: 700;
-}
+    //Table head
+    thead tr td { font-weight: normal; border-bottom: 2px solid color(brand); background-color: #f6f8fa; }
 
-th, td {
-    padding: 15px;
+    //Table row
+    tr td { border-bottom: 1px solid color(brand-annex); padding: { top: 10px; bottom: 10px; left: 10px; } }
 }
 
 @media (min-width: 40rem) {
