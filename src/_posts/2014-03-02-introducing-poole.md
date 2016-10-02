@@ -3,6 +3,7 @@ layout: post
 date: 2014-03-02
 title: Introducing Poole
 categories: jekyll poole
+description: Lorem ipsum dolor sit amet.
 allowComments: true
 ---
 

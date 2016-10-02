@@ -9,8 +9,8 @@ header[role=header] {
     }
 
     .min {
-        font-size: 0.8rem;
-        letter-spacing: 1px;
+        font-size: 0.75rem;
+        font-weight: light;
         font-family: $sans-serif;
     }
 }
@@ -72,7 +72,12 @@ footer[role=presentation] {
 }
 
 /*Social*/
-
+footer[role="presentation"]{
+    display:none;
+    @include breakpoint(large) {
+        display:block;
+    }
+}
 .social{
     list-style: none;
     li{
@@ -103,6 +108,47 @@ footer[role=presentation] {
             }
     }
 
+}
+
+/*----------  Blog List  ----------*/
+#post-list li{
+    margin-bottom: 1rem;
+}
+#post-list {
+  h2 {
+    font: normal 1rem/1.5em $sans-serif;
+    color: #aaa;
+    max-width: 400px;
+    margin-top: 2px;
+  }
+  margin-top:2rem;
+  li {
+    &:last-child {
+      margin-bottom: 0;
+    }
+    + li {
+      padding-top: 1rem;
+      border-top: 1px solid color(grey);
+    }
+  }
+  a {
+    color: color(brand);
+    display: block;
+    font: normal 1.3rem/1.7 $serif;
+    text-decoration: none;
+  }
+  .dates {
+    float: right;
+    position: relative;
+    top: 1px;
+    font: 300 0.8rem/1.8 $sans-serif;
+    text-transform: uppercase;
+    color: #bbb;
+  }
+}
+
+#post-list li, #archive-list li {
+  list-style-type: none;
 }
 
 /*----------  Dribbble  ----------*/
