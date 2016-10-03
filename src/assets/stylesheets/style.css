@@ -575,6 +575,40 @@ hr {
   max-width: 5rem;
   margin-left: 0; }
 
+.single-content hr {
+  margin: 2em 0;
+  text-align: center;
+  line-height: 1px;
+  height: 1px;
+  border: 1px solid #eee;
+  border-left: 0;
+  border-right: 0;
+  font-size: 1.5em;
+  width: 100%;
+  max-width: 100%; }
+  .single-content hr:after {
+    content: '§';
+    color: #888;
+    display: inline;
+    background: #fdfdfd;
+    padding: .2em .5em;
+    border: 1px solid #fdfdfd;
+    border-radius: 100px;
+    -webkit-transition: .3s ease all;
+            transition: .3s ease all; }
+  .single-content hr:before {
+    position: absolute;
+    content: '';
+    background: transparent;
+    border-spacing: 10px;
+    margin-top: -24px;
+    margin-left: 1px;
+    width: 49px;
+    height: 49px;
+    -webkit-transition: .3s ease-out all;
+            transition: .3s ease-out all;
+    border-radius: 100px; }
+
 abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #e5e5e5; }
@@ -969,6 +1003,17 @@ body {
   position: absolute;
   top: 0; }
 
+#progress {
+  width: 100%;
+  height: 0.2rem;
+  background-image: -webkit-linear-gradient(left, #007EA7 0%, #9AD1D4 100%);
+  background-image: linear-gradient(to right, #007EA7 0%, #9AD1D4 100%);
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 .header[role=banner] {
   margin: 10vh 0; }
   .header[role=banner] h1 {
@@ -983,7 +1028,6 @@ body {
         width: 32.57576%;
         margin: 0 0.37879%; } }
   .header[role=banner] nav {
-    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline;
     float: left;
     width: 99.24242%;
@@ -1038,8 +1082,8 @@ body {
   text-align: right; }
   .main-nav a {
     font-size: 0.85rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: light;
     color: #222;
     text-decoration: none;
     display: inline-block;
@@ -1049,7 +1093,7 @@ body {
     top: -1rem; }
     @media (min-width: 48em) {
       .main-nav a {
-        font-size: 0.65rem; } }
+        font-size: 0.85rem; } }
     .main-nav a:before {
       content: '';
       display: block;
@@ -1078,8 +1122,7 @@ body {
 ==============================*/
 .site-footer {
   position: relative;
-  background-color: white;
-  padding-top: 1.5rem; }
+  background-color: white; }
   .site-footer .bottom-gradient {
     width: 100%;
     height: 0.2rem;
@@ -1094,8 +1137,8 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 1rem;
-  margin-top: 1rem; }
+  margin-bottom: 0.5rem;
+  margin-top: 2rem; }
 
 .site-footer li {
   display: inline;
@@ -1120,8 +1163,11 @@ body {
 .site-footer a:active {
   border-bottom: transparent 1px solid !important; }
 
-.site-footer footer {
-  margin-top: 1rem; }
+.site-footer .footer {
+  margin-top: 1.5rem; }
+  .site-footer .footer .splitcontent {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.2); }
 
 /*=====  End of Footer  ======*/
 /*----------  Components  ----------*/
@@ -1161,8 +1207,8 @@ header[role=header] h2.bording {
   width: 80%; }
 
 header[role=header] .min {
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  font-size: 0.75rem;
+  font-weight: light;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 section[role=presentation] {
@@ -1215,6 +1261,12 @@ footer[role=presentation] {
   margin-top: 3vh; }
 
 /*Social*/
+footer[role="presentation"] {
+  display: none; }
+  @media (min-width: 48em) {
+    footer[role="presentation"] {
+      display: block; } }
+
 .social {
   list-style: none; }
   .social li {
@@ -1238,6 +1290,38 @@ footer[role=presentation] {
       left: 0rem; }
     .social li:hover:before {
       background-color: #FFBA08; }
+
+/*----------  Blog List  ----------*/
+#post-list li {
+  margin-bottom: 1rem; }
+
+#post-list {
+  margin-top: 2rem; }
+  #post-list h2 {
+    font: normal 1rem/1.5em "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #aaa;
+    max-width: 400px;
+    margin-top: 2px; }
+  #post-list li:last-child {
+    margin-bottom: 0; }
+  #post-list li + li {
+    padding-top: 1rem;
+    border-top: 1px solid #cccccc; }
+  #post-list a {
+    color: #007EA7;
+    display: block;
+    font: normal 1.3rem/1.7 "MinionProReg", serif;
+    text-decoration: none; }
+  #post-list .dates {
+    float: right;
+    position: relative;
+    top: 1px;
+    font: 300 0.8rem/1.8 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #bbb; }
+
+#post-list li, #archive-list li {
+  list-style-type: none; }
 
 /*----------  Dribbble  ----------*/
 .insta {
@@ -1333,4 +1417,8 @@ figure.roll {
 =            Blog            =
 ============================*/
 /*=====  End of Blog  ======*/
+/*==================================
+=            About Page            =
+==================================*/
+/*=====  End of About Page  ======*/
 /*=====  End of Styles  ======*/

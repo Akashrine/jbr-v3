@@ -10,11 +10,17 @@
     z-index: -1;
 }
 
-.top-gradient {
+.top-gradient{
     @include gradient;
 
     position: absolute;
     top: 0;
+}
+#progress{
+    @include gradient;
+      position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .header[role=banner] {
@@ -29,7 +35,6 @@
     }
 
     nav {
-        font-family: $sans-serif;
 
         @include column(12);
 
@@ -103,13 +108,12 @@
 
     a {
         @include breakpoint(large) {
-            font-size: 0.65rem;
+            font-size: 0.85rem;
         }
 
-
         font-size: 0.85rem;
-        font-weight: bold;
-        text-transform: uppercase;
+        font-family: $sans-serif;
+        font-weight: light;
         color: color(dark);
         text-decoration: none;
         display: inline-block;

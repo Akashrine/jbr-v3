@@ -187,6 +187,40 @@ hr {
     max-width: 5rem;
     margin-left: 0;
 }
+.single-content hr {
+      margin: 2em 0;
+    text-align: center;
+    line-height: 1px;
+    height: 1px;
+    border: 1px solid #eee;
+    border-left: 0;
+    border-right: 0;
+    font-size: 1.5em;
+    width:100%;
+    max-width:100%;
+  &:after {
+    content: '§';
+    color: color(note-text);
+    display: inline;
+    background: color(white);
+    padding: .2em .5em;
+    border: 1px solid color(white);
+    border-radius: 100px;
+    transition: .3s ease all;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    background: transparent;
+    border-spacing: 10px;
+    margin-top: -24px;
+    margin-left: 1px;
+    width: 49px;
+    height: 49px;
+    transition: .3s ease-out all;
+    border-radius: 100px;
+  }
+}
 
 abbr[title] {
     cursor: help;

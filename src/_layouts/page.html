@@ -1,7 +1,21 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    {% include head.html %}
+<body class="about">
+    <div class="diag"></div>
+    <header class="header" role="banner">
+        <div class="container">
+            <h1 class="header__logo upper"><a href="{{site.url}}" title="{{site.name}}" data-letters="Julien Brionne">Julien Brionne —<br /><span>product thinker.</span></a></h1>
+            {% include nav.html %}
+        </div>
+    </header>
+    <figure class="top-gradient"></figure>
 
-<div class="page">
-  {{ content }}
-</div>
+    <main class="site-content">
+        <section class="container">
+         {{ content }}
+        </section>
+    </main>
+    {% include footer.html %}
+</body>
+</html>
