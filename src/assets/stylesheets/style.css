@@ -1094,8 +1094,8 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
-  margin-top: 60px; }
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
 
 .site-footer li {
   display: inline;
@@ -1119,6 +1119,9 @@ body {
 
 .site-footer a:active {
   border-bottom: transparent 1px solid !important; }
+
+.site-footer footer {
+  margin-top: 1rem; }
 
 /*=====  End of Footer  ======*/
 /*----------  Components  ----------*/

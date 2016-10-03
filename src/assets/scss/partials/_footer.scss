@@ -18,8 +18,8 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
-    margin-top: 60px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   li {
     &:first-child {
@@ -45,6 +45,9 @@
     &:active {
       border-bottom: transparent 1px solid !important;
     }
+  }
+  footer{
+    margin-top: 1rem;
   }
 }
 
