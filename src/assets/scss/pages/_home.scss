@@ -6,6 +6,8 @@ header[role=header] {
     h2.bording {
         margin: 0.8rem 0;
         width: 80%;
+        font-family: $serif-bold;
+        font-size: 2.5rem;
     }
 
     .min {
@@ -31,11 +33,11 @@ section[role=presentation] {
 
         p {
             @include breakpoint(large) {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
 
 
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: color(brand);
             line-height: 1.6;
         }
@@ -88,8 +90,11 @@ footer[role="presentation"]{
             text-decoration: none;
             font-family: $sans-serif;
             text-transform: uppercase;
-            font-weight: normal;
-            font-size: 0.9rem;
+            font-weight: bold;
+            font-size: 0.8rem;
+            &:hover{
+                color:color(inverted-brand);
+            }
         }
             &:before {
                 content: '';
@@ -216,23 +221,28 @@ figure.roll {
     }
 
     ul {
+        display: none;
+        @include breakpoint(medium){
+        display: block;
         -webkit-transition: -webkit-transform 0.35s;
         transition: transform 0.35s;
         -webkit-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
         color: color(white);
         width: 100%;
-        margin: 30% 0 0;
+        margin: 20% 0 0;
         padding: 0;
+        }
+
 
         li {
             display: inline-block;
             margin: 0 1rem 0;
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-family: $sans-serif;
 
             i {
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
         }
     }

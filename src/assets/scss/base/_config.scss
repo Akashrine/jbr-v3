@@ -4,6 +4,7 @@
 
 /*----------  Font Face  ----------*/
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i);
 
 @include font-face(MinionProReg, fonts/MinionPro-Regular);
 @include font-face(MinionProBold, fonts/MinionPro-Bold);
@@ -29,7 +30,7 @@ $colors: (brand: #007EA7, brand-annex: #9AD1D4, inverted-brand: #FFBA08, dark: #
 /*----------  Typo  Vars ----------*/
 
 $sans-serif:'Noto Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$serif: 'MinionProReg', serif;
+$serif: 'PT Serif', serif;
 $serif-bold: 'MinionProBold', serif;
 
 
@@ -37,8 +38,7 @@ $serif-bold: 'MinionProBold', serif;
 $column-width     : 100px;
 $gutter-width     : 10px;
 $columns          : 12;
-$content-width    : 50rem;
-$post-width       : 50rem;
+$content-width    : 48rem;
 $total-width      : 100%;
 
 /*----------  Test  ----------*/

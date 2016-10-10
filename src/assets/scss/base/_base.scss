@@ -3,21 +3,15 @@
 ============================*/
 
 html {
-    font: 100% / 1.4 $sans-serif;
+    font: 16px / 1.4 $sans-serif;
     font-weight: 400;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-}
-
-@media (min-width: 40rem) {
-    html {
-        font-size: 112%;
+    @include breakpoint(medium){
+        font-size: 18px;
     }
-}
-
-@media (min-width: 64rem) {
-    html {
-        font-size: 120%;
+    @include breakpoint(large){
+        font-size: 20px
     }
 }
 
@@ -45,23 +39,23 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     color: color(head-type);
     letter-spacing: -.025rem;
-    font-family: $serif-bold;
+    font-family: $serif;
 }
 
 h1 {
-    font-size: 2.618rem;
+    font-size: 3.125rem;
     margin-bottom: 1.618rem;
     line-height: 1.4;
 }
 
 h2 {
-    font-size: 1.618rem;
+    font-size: 2.3125rem;
     margin-bottom: 1.618rem;
     line-height: 1.25;
 }
 
 h3 {
-    font-size: 1.333rem;
+    font-size: 1.75rem;
     margin-bottom: .5rem;
 }
 
@@ -150,7 +144,7 @@ ol + h3 {
     margin-top: 1.5rem;
 }
 
-p a {
+p a, .single-content li a {
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -160,7 +154,7 @@ p a {
     &:hover {}
 }
 
-p a:after {
+p a:after, .single-content li a:after {
     position: absolute;
     top: 98%;
     left: 0;
@@ -172,7 +166,7 @@ p a:after {
     z-index: -1;
 }
 
-p a:hover:after {
+p a:hover:after, .single-content li a:hover:after {
     background: color(inverted-brand);
     height: 0.5em;
     top: 50%;
@@ -268,40 +262,31 @@ blockquote.awesome {
     }
 }
 
-code,
-pre {
-    font-family: Menlo, Monaco, "Courier New", monospace;
+/*----------  Pre Code  ----------*/
+pre{
+    font-size: 0.8rem;
+    border-left:solid 2px color(brand);
+    border-bottom: solid 1px color(grey);
+    background: #f7f7f7;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    -webkit-transition: all 0.3s; /* Safari */
+    transition: all 0.3s;
+    &:hover{
+        width: 120%;
+        position: relative;
+        -webkit-transform: translate(-10%,0);
+        margin: 2rem;
+    }
+}
+.gist pre{
+    &:hover{
+        width: 100%;
+        -webkit-transform: translate(0,0);
+    }
 }
 
-code {
-    padding: .25em .5em;
-    font-size: 85%;
-    color: color(brand);
-    background-color: color(white);
-    border-radius: 3px;
-}
-
-pre {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    padding: 0.2rem;
-    font-size: .8rem;
-    line-height: 1.4;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-break: break-all;
-
-    // word-wrap: break-word;
-    background-color: color(white);
-}
-
-pre code {
-    padding: 0;
-    font-size: 100%;
-    color: inherit;
-    background-color: transparent;
-}
 
 /*----------  table  ----------*/
 
@@ -322,19 +307,6 @@ table
     tr td { border-bottom: 1px solid color(brand-annex); padding: { top: 10px; bottom: 10px; left: 10px; } }
 }
 
-@media (min-width: 40rem) {
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2.25rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-}
 
 /*========================================
 =            Layout and Grid (kind of)            =
@@ -375,7 +347,6 @@ body {
         padding: 1rem 2rem;
     }
 }
-
 .grid {
     display: flex;
     flex-flow: row wrap;
